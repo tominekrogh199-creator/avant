@@ -27,7 +27,7 @@ jobs:
       - name: Samle filer
         run: |
           mkdir _site
-          cp -r index.html featured.html featured.json favicon.ico assets css js _site/
+          cp -r index.html featured.html featured.json favicon.ico CNAME assets css js _site/
           touch _site/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

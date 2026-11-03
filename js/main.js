@@ -39,20 +39,11 @@
   };
   window.avantVis();
 
-  // Sosiale lenker: vis lenke bare hvis URL er satt i config.js
-  document.querySelectorAll("[data-sosial]").forEach(function (el) {
-    var url = (cfg[el.getAttribute("data-sosial")] || "").trim();
-    var navn = el.getAttribute("data-navn");
-    if (url) {
-      var a = document.createElement("a");
-      a.className = "lenke"; a.href = url; a.target = "_blank"; a.rel = "noopener";
-      a.innerHTML = el.innerHTML;
-      a.setAttribute("aria-label", "AVANT på " + navn + " (åpnes i ny fane)");
-      el.replaceWith(a);
-    } else {
-      el.className = "sosial-kommer";
-      el.innerHTML = el.innerHTML + ' <small>Kommer snart</small>';
-    }
+  // Sosiale lenker: lenkene står i HTML-en; config.js kan overstyre URL-en
+  document.querySelectorAll("a[data-sosial]").forEach(function (a) {
+    var url = (cfg[a.getAttribute("data-sosial")] || "").trim();
+    if (url) a.href = url;
+    a.target = "_blank"; a.rel = "noopener";
   });
 
   // Kontaktskjema -> mailto

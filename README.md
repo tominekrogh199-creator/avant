@@ -4,8 +4,9 @@
 
 Nettsiden til AVANT (tidligere KANT) – et studentprosjekt fra BI Oslo. AVANT løfter små og nye norske motemerker og unge skapere, og bygger et kreativt fellesskap for unge.
 
-- Live: https://tominekrogh199-creator.github.io/avant/
-- Featured Edit: https://tominekrogh199-creator.github.io/avant/featured.html
+- Live: https://avantedit.no/
+- Featured Edit: https://avantedit.no/featured.html
+- Instagram: [@avant_edit](https://www.instagram.com/avant_edit/) · TikTok: [@avant_edit](https://www.tiktok.com/@avant_edit)
 
 Siden er ren HTML, CSS og JavaScript (ingen byggesteg). Hver gang noe endres på `main`, publiseres siden automatisk på nytt med GitHub Actions (`.github/workflows/pages.yml`). Det tar som regel 1–2 minutter.
 
@@ -28,7 +29,7 @@ Alt kan gjøres direkte i GitHub i nettleseren – du trenger ikke installere no
 2. **Åpne `featured.json`** og trykk på blyanten (✏️ *Edit this file*).
 3. **Kopier malen.** Øverst i filen ligger `_mal_for_nytt_plagg`. Kopier alt mellom `{` og `}` og lim det inn som et nytt element i listen `"plagg": [ ... ]`. Legg det **øverst** i listen hvis det nyeste plagget skal vises først. Husk komma mellom elementene.
 4. **Fyll inn feltene:**
-   - `id` – kort og unik, bare små bokstaver, tall og bindestrek (f.eks. `merkenavn-jakke`). Denne blir lenken: `https://tominekrogh199-creator.github.io/avant/featured.html#merkenavn-jakke`
+   - `id` – kort og unik, bare små bokstaver, tall og bindestrek (f.eks. `merkenavn-jakke`). Denne blir lenken: `https://avantedit.no/featured.html#merkenavn-jakke`
    - `utgave` – f.eks. `Utgave 01`
    - `plagg`, `merke`, `skaper` (Instagram-navnet til skaperen, kan stå tomt `""`), `tekst`
    - `bilde` – stien til bildet, f.eks. `assets/plagg/merkenavn-jakke.jpg`, og `bildeAlt` – en kort beskrivelse av bildet
@@ -60,7 +61,17 @@ Eksempel på et ferdig plagg:
 
 ## Instagram og TikTok
 
-Når brukernavnene er klare: åpne `js/config.js`, lim inn full URL i `instagram` og `tiktok`, og lagre. Så lenge feltene er tomme, viser siden «Kommer snart» i stedet for lenker.
+AVANT heter `@avant_edit` på begge. Lenkene står direkte i `index.html` og `featured.html` (kontakt, Om oss og bunnteksten), og URL-ene ligger også i `js/config.js`. Bytter dere brukernavn, oppdater `@avant_edit`-teksten i HTML-en og URL-ene i `js/config.js`.
+
+## Domene
+
+Siden ligger på https://avantedit.no/ (filen `CNAME`). DNS hos domeneregistraren må peke til GitHub Pages:
+
+- `@` (apex) A: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+- `@` (apex) AAAA (valgfritt): `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`
+- `www` CNAME: `tominekrogh199-creator.github.io`
+
+Når DNS virker: slå på «Enforce HTTPS» under Settings → Pages.
 
 ## Bilder
 

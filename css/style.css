@@ -228,8 +228,6 @@ p { margin: 1rem 0 0; }
   background-image: linear-gradient(var(--burgunder), var(--burgunder)); background-size: 100% 1px; background-repeat: no-repeat; background-position: 0 100%; padding-bottom: .15rem; transition: color .3s; }
 .kontakt-epost:hover { color: var(--burgunder); }
 .sosiale { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 2rem; }
-.sosial-kommer { display: inline-flex; align-items: center; gap: .5rem; font-size: .72rem; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--tekst-dempet); }
-.sosial-kommer small { font-size: .62rem; letter-spacing: .18em; border: 1px solid rgba(43,33,27,.25); padding: .2rem .45rem; }
 .ikon { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.4; }
 
 .skjema { display: grid; gap: 1.35rem; }
@@ -304,3 +302,17 @@ p { margin: 1rem 0 0; }
 .poster { max-width: 420px; margin: 0 auto; box-shadow: 0 30px 60px -30px rgba(0,0,0,.6); }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .topp.apen { background: var(--krem); backdrop-filter: none; }
+
+/* Sosiale lenker og @avant_edit-håndtak */
+.sosial { display: inline-flex; align-items: center; gap: .5rem; font-size: .72rem; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; text-decoration: none; transition: color .3s; }
+.sosial__handle { font-family: var(--serif); font-size: 1.05rem; letter-spacing: 0; text-transform: none; font-weight: 400;
+  background-image: linear-gradient(var(--burgunder), var(--burgunder)); background-size: 100% 1px; background-repeat: no-repeat; background-position: 0 100%; padding-bottom: .1rem; transition: background-size .35s var(--ease); }
+.sosial:hover { color: var(--burgunder); }
+.sosial:hover .sosial__handle { background-size: 35% 1px; }
+.handle { font-family: var(--serif); font-style: italic; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; transition: color .3s; }
+.handle:hover { color: var(--burgunder); }
+.om-sosial { margin-top: 1rem; }
+.bunn__kontakt { display: grid; gap: .5rem; }
+.bunn__sosial { margin: 0; }
+.bunn__rad .bunn__sosial a.handle { text-decoration: underline; text-decoration-color: rgba(244,239,230,.35); color: var(--krem); }
+.bunn__rad .bunn__sosial a.handle:hover { text-decoration-color: currentColor; color: #fff; }
