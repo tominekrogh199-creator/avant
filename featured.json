@@ -1,0 +1,58 @@
+{
+  "utgave": "Utgave 01",
+  "_mal_for_nytt_plagg": {
+    "id": "merkenavn-plaggnavn",
+    "utgave": "Utgave 01",
+    "plagg": "Navn på plagget",
+    "merke": "Navn på merket",
+    "skaper": "@skaperens-brukernavn",
+    "tekst": "To–tre setninger om plagget og merket.",
+    "bilde": "assets/plagg/merkenavn-plaggnavn.jpg",
+    "bildeAlt": "Kort beskrivelse av bildet for skjermlesere.",
+    "merkeNettside": "https://...",
+    "merkeInstagram": "https://www.instagram.com/...",
+    "innleggInstagram": "https://www.instagram.com/p/...",
+    "innleggTiktok": ""
+  },
+  "plagg": [
+    {
+      "id": "utgave-01",
+      "plassholder": true,
+      "utgave": "Utgave 01",
+      "plagg": "Utgave 01 – kommer snart",
+      "merke": "Ditt merke her?",
+      "tekst": "Det første plagget i Featured Edit er på vei. Her får hvert plagg sin egen side, med lenke til merket og til innlegget vårt.",
+      "bilde": "assets/img/rail-crop.webp",
+      "bildeAlt": "Lyse plagg i lin, blonder og ull henger på et stativ i varmt lys."
+    },
+    {
+      "id": "ditt-merke-her",
+      "plassholder": true,
+      "utgave": "Utgave 01",
+      "plagg": "Ditt merke her?",
+      "merke": "Plass til et lite norsk merke",
+      "tekst": "Vi leter etter små og nye norske merker som vil vises frem av unge skapere på Instagram og TikTok.",
+      "flatetekst": "Ditt merke *her?*"
+    },
+    {
+      "id": "plagg-02",
+      "plassholder": true,
+      "utgave": "Utgave 01",
+      "plagg": "Neste plagg – kommer snart",
+      "merke": "Ditt merke her?",
+      "tekst": "Strikk, sying, små opplag – vi vil vise frem håndverket og menneskene bak.",
+      "bilde": "assets/img/craft-crop.webp",
+      "bildeAlt": "Strikkegenser, stoffprøver i sand og burgunder, en saks og en ring."
+    },
+    {
+      "id": "plagg-03",
+      "plassholder": true,
+      "utgave": "Utgave 01",
+      "plagg": "Ditt plagg her?",
+      "merke": "Ditt merke her?",
+      "tekst": "Er du designer? Send oss en melding, så kan ditt plagg få sin egen side her.",
+      "flatetekst": "Kommer *snart*",
+      "flate": "sand"
+    }
+  ]
+}
