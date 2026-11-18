@@ -31,3 +31,14 @@
   }, { threshold: 0.25 });
   videoer.forEach(function (v) { io.observe(v); });
 })();
+
+/* Bilder toner rolig inn; tekst er alltid synlig. */
+(function () {
+  "use strict";
+  var el = document.querySelectorAll(".bilde-inn");
+  if (!("IntersectionObserver" in window)) { el.forEach(function (e) { e.classList.add("synlig"); }); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("synlig"); io.unobserve(en.target); } });
+  }, { rootMargin: "0px 0px -5% 0px", threshold: 0.02 });
+  el.forEach(function (e) { io.observe(e); });
+})();
