@@ -454,3 +454,8 @@ p { margin: 1rem 0 0; }
 }
 @media (min-width: 880px) { .topp--magasin { color: var(--espresso); } }
 .sitat-bilde--mork::after { background: linear-gradient(180deg, rgba(33,25,19,.3) 0%, rgba(33,25,19,.45) 40%, rgba(33,25,19,.88) 100%); }
+/* Detaljene: plaggene først */
+.detaljer { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+.detaljer > :first-child { grid-column: 1 / -1; }
+@media (min-width: 880px) { .detaljer { grid-template-columns: 1.3fr 1fr 1fr; gap: 1.5rem; } .detaljer > :first-child { grid-column: auto; } }
+.mag-aapning__bilde img { object-position: 50% 0; }
