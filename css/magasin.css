@@ -125,7 +125,9 @@
 .takeaways { background: var(--espresso); color: var(--krem); }
 .takeaways__inner { display: grid; }
 @media (min-width: 980px) { .takeaways__inner { grid-template-columns: 5fr 7fr; } }
-.takeaways video, .takeaways img { display: block; width: 100%; height: 100%; object-fit: cover; aspect-ratio: 9 / 16; max-height: 100svh; }
+.takeaways video, .takeaways img { display: block; width: 100%; height: 100%; object-fit: cover; aspect-ratio: 9 / 16; max-height: calc(100svh - 64px); }
+@media (min-width: 880px) { .takeaways video, .takeaways img { max-height: calc(100svh - 80px); } }
+.takeaways img { object-position: 50% 0; }
 .takeaways__tekst { padding: clamp(3.5rem, 9vw, 6.5rem) var(--pad); align-self: center; }
 .takeaways__boks { border: 1px solid rgba(244,239,230,.35); padding: clamp(1.5rem, 4vw, 2.75rem); margin-top: 2rem; }
 .takeaways h2 { font-size: clamp(2.2rem, 6vw, 3.8rem); }
