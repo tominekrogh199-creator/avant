@@ -283,3 +283,17 @@
 
 /* Kontaktark: litt tettere og jevnere på desktop */
 @media (min-width: 880px) { .mag .kontaktark { column-gap: 1.25rem; } .mag .kontaktark figure { margin-bottom: 1.25rem; } }
+
+/* SEN: Paris-blokken tidlig i featuren */
+.mag .paris__tittel { font-family: var(--serif); font-weight: 400; font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: 1.02; color: #F3E3D3; margin: 0; text-wrap: balance; }
+.mag .paris__tittel em { color: #E3C9B5; }
+.mag .paris__uthevet { margin: 2rem 0 0; padding: 1.25rem 0 1.25rem 1.25rem; border-left: 1px solid #D9A3A9; font-family: var(--serif); font-style: italic; font-size: clamp(1.25rem, 2.6vw, 1.7rem); line-height: 1.35; color: #F3E3D3; max-width: 30ch; }
+.mag .paris .pq-spread__brod { font-size: 1.02rem; line-height: 1.7; }
+@media (min-width: 880px) { .mag .paris { min-height: 88svh; } }
+
+/* To kapitler i samme spalte */
+.mag .kap-hode--neste { margin-top: clamp(3.5rem, 8vw, 5.5rem); }
+
+/* Sluttlinje */
+.mag .pq__slutt { margin: 0 auto; max-width: 20ch; font-family: var(--serif); font-weight: 400; font-size: clamp(2rem, 6.4vw, 4.6rem); line-height: 1.08; text-wrap: balance; }
+.mag .pq__slutt em { font-style: italic; color: var(--burgunder); }
