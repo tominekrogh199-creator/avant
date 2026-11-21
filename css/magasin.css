@@ -168,3 +168,118 @@
 .omslag__masthead { font-size: 24cqw; }
 .omslag::after { background: linear-gradient(180deg, rgba(33,25,19,0) 55%, rgba(33,25,19,.7) 100%); }
 .coverlinje span { font-size: clamp(1.05rem, 4.6cqw, 1.7rem); }
+
+/* ==========================================================
+   Utkast 3 – forbedringer etter kritikerrunde.
+   Alt er avgrenset til .mag (bare Featured Edit-sidene).
+   ========================================================== */
+
+/* Luft på sidene på mobil: .omslag-wrap og .kred overstyrte .wrap-polstringen */
+.mag .omslag-wrap, .mag .kred { padding-left: var(--pad); padding-right: var(--pad); }
+
+/* Bildetekster: litt større og lettere å lese */
+.mag .bt { font-size: .66rem; letter-spacing: .18em; line-height: 1.6; }
+
+/* Redaksjonen (forsiden) – flyttet fra inline-stil */
+.mag .redaksjon__tittel { margin-top: 0; font-size: clamp(3.2rem, 9vw, 6.5rem); }
+.mag .register__tittel { margin: 2.75rem 0 0; font-size: .7rem; letter-spacing: .28em; line-height: 1.4; color: var(--tekst-dempet); }
+.mag .register { margin-top: .9rem; }
+.mag .register a { padding: 1.25rem .25rem; transition: background-color .4s var(--ease); }
+.mag .register a:hover { background: rgba(216,202,179,.25); }
+.mag .register .pil { transition: transform .4s var(--ease); }
+.mag .register a:hover .pil { transform: translateX(4px); }
+.mag .redaksjon__signatur { margin-top: 1.75rem; }
+.mag .redaksjon .ingress { max-width: 30ch; }
+.mag .redaksjon > p:not(.ingress):not(.kicker):not(.smaa) { max-width: 46ch; }
+@media (min-width: 980px) { .mag .redaksjon { position: sticky; top: 108px; } }
+
+/* Inngangsoppslag: tydeligere lenke, rolig bevegelse */
+.mag .aapner__lenke { margin-top: 1.5rem; }
+.mag .aapner h2.ordmerke-merke { line-height: .9; letter-spacing: .12em; }
+.mag .aapner:focus-visible .ramme { outline: 2px solid var(--burgunder); outline-offset: 4px; }
+
+/* Sitater som figurer */
+.mag .pq__figur { margin: 0; }
+.mag .pq blockquote { text-wrap: balance; }
+.mag .pq-spread blockquote { text-wrap: balance; }
+.mag .pq-spread__lang { font-size: clamp(2.2rem, 5.4vw, 4.4rem); line-height: 1.08; }
+.mag .pq-spread__kilde { margin-top: 2rem; }
+.mag .pq-spread__brod { margin-top: 2rem; }
+
+/* CTA – flyttet fra inline-stil */
+.mag .mag-cta__inner { text-align: center; }
+
+/* Overskrifter: balansert linjebryting, ingen enslige ord */
+.mag h1, .mag h2, .mag .f-tittel, .mag .aapner__tittel, .mag .coverlinje span { text-wrap: balance; }
+.mag .tekst p, .mag .qa dd, .mag .standfirst { text-wrap: pretty; hyphens: manual; }
+
+/* Feature-åpning: metalinjen skal ikke brekke midt i ord-par */
+.mag .f-meta { flex-wrap: wrap; row-gap: .4rem; }
+.mag .f-meta > * { white-space: nowrap; }
+.mag .f-meta__tilbake { text-decoration: none; background-image: linear-gradient(currentColor, currentColor); background-size: 0 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .4s var(--ease); }
+.mag .f-meta__tilbake:hover { background-size: 100% 1px; }
+@media (max-width: 420px) { .mag .f-meta { font-size: .62rem; letter-spacing: .22em; } }
+
+/* Dropcap uten inline-stil */
+.mag .tekst .dropcap { margin-top: 0; }
+
+/* Mer rytme mellom spørsmål og svar */
+.mag .qa dd { max-width: 40rem; }
+.mag .qa dt + dd { margin-top: .6rem; }
+
+/* Bildegalleri etter sitatet */
+.mag .mag-bilder { padding-bottom: clamp(4rem, 10vw, 7rem); }
+
+/* Klistrede bilder skal aldri gli under den faste toppen */
+@media (min-width: 980px) { .mag .klistre { top: calc(76px + 2rem); } }
+
+/* ---------- Takeaways: bildet/videoen i en rolig ramme ----------
+   Løser to ting: fingertuppene i SEN-bildet lå tett inntil den faste
+   toppen, og Klyo-videoen ble kortere enn tekstspalten ved siden av.
+   Nå får begge nøyaktig samme ramme og høyde, uten at bildet beskjæres
+   annerledes i filen. */
+.mag .takeaways__media { margin: 0; padding: clamp(1.25rem, 4vw, 2.5rem) var(--pad) 0; }
+.mag .takeaways__ramme { position: relative; box-shadow: 0 30px 60px -40px rgba(0,0,0,.6); }
+.mag .takeaways__ramme video, .mag .takeaways__ramme img {
+  display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; max-height: none; object-fit: cover; object-position: 50% 0;
+}
+@media (min-width: 980px) {
+  .mag .takeaways__inner { align-items: stretch; }
+  .mag .takeaways__media { padding: clamp(2.5rem, 4vw, 3.5rem) 0 clamp(2.5rem, 4vw, 3.5rem) var(--pad); }
+  .mag .takeaways__ramme { position: sticky; top: calc(76px + 2rem); width: fit-content; max-width: 100%; }
+  .mag .takeaways__ramme video, .mag .takeaways__ramme img { width: auto; max-width: 100%; height: calc(100svh - 76px - 4rem); max-height: 880px; }
+  .mag .takeaways__tekst { padding-left: clamp(2rem, 4.5vw, 4.5rem); }
+}
+.mag .takeaways .kap-nr { color: #D9A3A9; }
+.mag .takeaways h2 { margin-top: .5rem; }
+.mag .takeaways__boks { border-color: rgba(244,239,230,.28); }
+.mag .tk span { line-height: 1.6; }
+
+/* Pause-knapp for videoen (WCAG 2.2.2) – rolig, kantete, ingen pilleform */
+.mag .video-pause {
+  position: absolute; left: .75rem; bottom: .75rem; z-index: 1;
+  font: 500 .6rem/1 var(--sans); letter-spacing: .22em; text-transform: uppercase;
+  color: var(--krem); background: rgba(43,33,27,.55); border: 1px solid rgba(244,239,230,.45); border-radius: 0;
+  padding: .6rem .8rem; cursor: pointer; transition: background-color .3s var(--ease);
+}
+.mag .video-pause:hover { background: rgba(43,33,27,.8); }
+@media (prefers-reduced-motion: reduce) { .mag .video-pause { display: none; } }
+.no-js .mag .video-pause { display: none; }
+
+/* Kreditering */
+.mag .kred__merke { font-size: clamp(2.6rem, 8vw, 4.5rem); }
+@media (max-width: 480px) { .mag .kred dl { column-gap: 1.1rem; } .mag .kred dt { letter-spacing: .18em; } }
+
+/* «Neste»-blokken: lavere på mobil, med undertittel */
+.mag .neste { min-height: 62svh; }
+@media (min-width: 880px) { .mag .neste { min-height: 78svh; } }
+.mag .neste__kicker { color: #F7F2EA; }
+.mag .neste__pil { font-size: .5em; display: inline-block; transition: transform .6s var(--ease); }
+.mag .neste:hover .neste__pil { transform: translateX(8px); }
+.mag .neste__tittel { margin: 1rem 0 0; font-family: var(--serif); font-style: italic; font-size: clamp(1.2rem, 3vw, 1.8rem); color: #F3E3D3; }
+.mag .neste::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(33,25,19,0) 40%, rgba(33,25,19,.55) 100%); pointer-events: none; }
+.mag .neste .wrap { z-index: 1; }
+.mag .neste:focus-visible { outline: 2px solid var(--sand); outline-offset: -6px; }
+
+/* Kontaktark: litt tettere og jevnere på desktop */
+@media (min-width: 880px) { .mag .kontaktark { column-gap: 1.25rem; } .mag .kontaktark figure { margin-bottom: 1.25rem; } }

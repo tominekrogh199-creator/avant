@@ -36,7 +36,7 @@
       <button class="meny-knapp" type="button" aria-expanded="false" aria-controls="meny" aria-label="Åpne meny"><span></span></button>
       <nav class="meny" id="meny" aria-label="Hovedmeny">
         <ul>
-          <li><a href="featured.html">Featured Edit</a></li>
+          <li><a href="featured.html" aria-current="true">Featured Edit</a></li>
           <li><a href="index.html#om-oss">Om oss</a></li>
           <li><a href="index.html#visjon">Vår visjon</a></li>
           <li><a href="index.html#kontakt">Kontakt</a></li>
@@ -50,11 +50,11 @@
     <header class="f-aapning">
       <div class="f-aapning__bilde"><img src="assets/magasin/klyo/klyo-park-900.jpg" srcset="assets/magasin/klyo/klyo-park-900.jpg 720w, assets/magasin/klyo/klyo-park.jpg 1200w" sizes="(min-width: 980px) 50vw, 100vw" width="1200" height="1500" fetchpriority="high" decoding="async" alt="Broderte og mønstrede plagg fra Klyo på et stativ under trærne."></div>
       <div class="f-aapning__tekst">
-        <div class="f-meta smaa"><span>Featured Edit · Utgave 01</span><span>Nr. 02 · Designer story</span></div>
+        <div class="f-meta smaa"><a class="f-meta__tilbake" href="featured.html"><span aria-hidden="true">←</span> Featured Edit · Utgave 01</a><span>Nr. 02 · Designer story</span></div>
         <div>
           <h1 class="ordmerke-merke">Klyo</h1>
           <p class="f-tittel">Gi eksisterende materialer nytt liv</p>
-          <p class="standfirst">Kulani Premadasa redesigner duker, gardiner og overskuddsmaterialer til nye plagg. Hun startet i Sri Lanka i 2019 – og startet på nytt i Norge.</p>
+          <p class="standfirst">Kulani Premadasa redesigner duker, gardiner og overskuddsmaterialer til nye plagg. Hun startet i Sri Lanka i 2019 – og begynte på nytt i Norge.</p>
           <div class="byline smaa"><span>Tekst: AVANT · Intervjusvar: Kulani Premadasa</span><span>Foto: Klyo / Kulani Premadasa</span><span>Lesetid ca. 4 min</span></div>
         </div>
       </div>
@@ -65,8 +65,8 @@
         <div>
           <div class="kap-hode"><span class="kap-nr">Kapittel I</span><h2 id="k1">Fra Sri Lanka <em>til Norge</em></h2></div>
           <div class="tekst">
-            <p class="dropcap" style="margin-top:0">Kulani har studert Fashion Design and Product Development, og hun har en bachelorgrad med utmerkelse i motedesign fra University of Moratuwa i Sri Lanka.</p>
-            <p>Hun startet sin første virksomhet i Sri Lanka i 2019. Etter at hun flyttet til Norge i 2022, startet hun på nytt og ga merket navnet Klyo.</p>
+            <p class="dropcap">Kulani har studert Fashion Design and Product Development og har en bachelorgrad med utmerkelse i motedesign fra University of Moratuwa i Sri Lanka.</p>
+            <p>Den første virksomheten startet hun i Sri Lanka i 2019. Da hun flyttet til Norge i 2022, begynte hun på nytt – og ga merket navnet Klyo.</p>
             <p>Klyo lager plagg av tekstiler som allerede finnes. Plaggene selges via Instagram, på Tise og på markeder i Oslo og Hamar.</p>
           </div>
         </div>
@@ -78,8 +78,8 @@
       <div class="ramme bilde-inn"><img src="assets/magasin/klyo/klyo-bluser-900.jpg" srcset="assets/magasin/klyo/klyo-bluser-900.jpg 720w, assets/magasin/klyo/klyo-bluser.jpg 1600w" sizes="(min-width: 880px) 50vw, 100vw" width="1600" height="2000" loading="lazy" decoding="async" alt="Hvite broderte bluser på en mannekeng og et stativ."></div>
       <div class="pq-spread__tekst">
         <p class="kicker kicker--aksent">Visjonen</p>
-        <blockquote style="font-size:clamp(2.2rem,5.4vw,4.4rem);line-height:1.08">«Jeg ønsker å vise at vi kan skape vakre og unike plagg av materialer som allerede finnes.»</blockquote>
-        <p class="bt smaa" style="margin-top:2rem">— Kulani Premadasa, Klyo</p>
+        <blockquote class="pq-spread__lang">«Jeg ønsker å vise at vi kan skape vakre og unike plagg av materialer som allerede finnes.»</blockquote>
+        <p class="bt smaa pq-spread__kilde">— Kulani Premadasa, Klyo</p>
       </div>
     </section>
 
@@ -113,20 +113,20 @@
     <section class="pq lys" aria-label="Hennes råd">
       <div class="wrap">
         <p class="kicker kicker--aksent">Hennes råd</p>
-        <blockquote>«Lidenskap og hardt arbeid kan ta deg langt.»</blockquote>
+        <figure class="pq__figur"><blockquote>«Lidenskap og hardt arbeid kan ta deg langt.»</blockquote>
         <span class="strek" aria-hidden="true"></span>
-        <p class="kilde smaa dempet">Kulani Premadasa</p>
+        <figcaption class="kilde smaa dempet">Kulani Premadasa</figcaption></figure>
       </div>
     </section>
 
     <section class="takeaways" aria-labelledby="tk">
       <div class="takeaways__inner">
-        <video data-loop autoplay muted loop playsinline preload="metadata" poster="assets/magasin/video/klyo-loop-poster.jpg" aria-label="Kort, stille videoklipp: en hvit brodert bluse fra Klyo på kleshenger.">
+        <figure class="takeaways__media"><div class="takeaways__ramme"><video data-loop autoplay muted loop playsinline preload="metadata" poster="assets/magasin/video/klyo-loop-poster.jpg" aria-label="Kort, stille videoklipp: en hvit brodert bluse fra Klyo på kleshenger.">
           <source src="assets/magasin/video/klyo-loop.mp4" type="video/mp4">
-        </video>
+        </video><button class="video-pause" type="button">Pause video</button></div></figure>
         <div class="takeaways__tekst">
-          <span class="kap-nr" style="color:#D9A3A9">Kapittel III</span>
-          <h2 id="tk">Takeaways – fire ting vi tok <em>med oss</em></h2>
+          <span class="kap-nr">Kapittel III · Takeaways</span>
+          <h2 id="tk">Fire ting vi tok <em>med oss</em></h2>
           <div class="takeaways__boks">
             <ol class="tk">
               <li><div><strong>Start med det du har.</strong><span>Alt trenger ikke være perfekt fra starten. Lær underveis.</span></div></li>
@@ -144,7 +144,7 @@
       <div class="wrap kred">
         <div>
           <p class="kicker kicker--aksent">Møt merket</p>
-          <p class="ordmerke-merke" style="font-size:clamp(2.6rem,8vw,4.5rem)">Klyo</p>
+          <p class="ordmerke-merke kred__merke">Klyo</p>
           <p class="standfirst">Redesign av tekstiler som allerede finnes, av Kulani Premadasa.</p>
           <div class="knapper"><a class="knapp knapp--mork" href="https://klyo.no" target="_blank" rel="noopener">klyo.no <span class="pil" aria-hidden="true">→</span></a></div>
         </div>
@@ -159,11 +159,12 @@
     </section>
     </article>
 
-    <a class="neste" href="featured-sen-oslo.html" aria-label="Neste feature: SEN Oslo">
+    <a class="neste" href="featured-sen-oslo.html" aria-label="Les også: SEN Oslo">
       <img src="assets/magasin/sen-oslo/design-marine-gul-900.jpg" srcset="assets/magasin/sen-oslo/design-marine-gul-900.jpg 720w, assets/magasin/sen-oslo/design-marine-gul.jpg 1086w" sizes="100vw" width="1086" height="1357" loading="lazy" decoding="async" alt="">
       <div class="wrap">
-        <p class="kicker" style="color:#F7F2EA">Les også · Nr. 01 · Designer story</p>
-        <p class="ordmerke-merke">SEN Oslo <span aria-hidden="true" style="font-size:.5em">→</span></p>
+        <p class="kicker neste__kicker">Les også · Nr. 01 · Designer story</p>
+        <p class="ordmerke-merke">SEN Oslo <span class="neste__pil" aria-hidden="true">→</span></p>
+        <p class="neste__tittel">Enkelt, rent og skreddersydd</p>
       </div>
     </a>
   </main>

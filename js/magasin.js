@@ -25,7 +25,7 @@
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (en) {
       var v = en.target;
-      if (en.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+      if (en.isIntersecting && !v.dataset.pauset) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
       else v.pause();
     });
   }, { threshold: 0.25 });
@@ -41,4 +41,23 @@
     entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("synlig"); io.unobserve(en.target); } });
   }, { rootMargin: "0px 0px -5% 0px", threshold: 0.02 });
   el.forEach(function (e) { io.observe(e); });
+})();
+
+/* Pause-knapp for stille videoloop (WCAG 2.2.2). */
+(function () {
+  "use strict";
+  document.querySelectorAll(".video-pause").forEach(function (b) {
+    var v = b.parentNode.querySelector("video");
+    if (!v) return;
+    b.addEventListener("click", function () {
+      if (v.dataset.pauset) {
+        delete v.dataset.pauset;
+        var p = v.play(); if (p && p.catch) p.catch(function () {});
+        b.textContent = "Pause video";
+      } else {
+        v.dataset.pauset = "1"; v.pause();
+        b.textContent = "Spill av video";
+      }
+    });
+  });
 })();
