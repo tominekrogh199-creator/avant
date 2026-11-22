@@ -170,17 +170,16 @@
 .coverlinje span { font-size: clamp(1.05rem, 4.6cqw, 1.7rem); }
 
 /* ==========================================================
-   Utkast 3 – forbedringer etter kritikerrunde.
-   Alt er avgrenset til .mag (bare Featured Edit-sidene).
+   Featured Edit: detaljer. Avgrenset til .mag.
    ========================================================== */
 
-/* Luft på sidene på mobil: .omslag-wrap og .kred overstyrte .wrap-polstringen */
+/* Luft på sidene på mobil */
 .mag .omslag-wrap, .mag .kred { padding-left: var(--pad); padding-right: var(--pad); }
 
 /* Bildetekster: litt større og lettere å lese */
 .mag .bt { font-size: .66rem; letter-spacing: .18em; line-height: 1.6; }
 
-/* Redaksjonen (forsiden) – flyttet fra inline-stil */
+/* Redaksjonen (forsiden) */
 .mag .redaksjon__tittel { margin-top: 0; font-size: clamp(3.2rem, 9vw, 6.5rem); }
 .mag .register__tittel { margin: 2.75rem 0 0; font-size: .7rem; letter-spacing: .28em; line-height: 1.4; color: var(--tekst-dempet); }
 .mag .register { margin-top: .9rem; }
@@ -206,7 +205,7 @@
 .mag .pq-spread__kilde { margin-top: 2rem; }
 .mag .pq-spread__brod { margin-top: 2rem; }
 
-/* CTA – flyttet fra inline-stil */
+/* CTA */
 .mag .mag-cta__inner { text-align: center; }
 
 /* Overskrifter: balansert linjebryting, ingen enslige ord */
@@ -233,11 +232,7 @@
 /* Klistrede bilder skal aldri gli under den faste toppen */
 @media (min-width: 980px) { .mag .klistre { top: calc(76px + 2rem); } }
 
-/* ---------- Takeaways: bildet/videoen i en rolig ramme ----------
-   Løser to ting: fingertuppene i SEN-bildet lå tett inntil den faste
-   toppen, og Klyo-videoen ble kortere enn tekstspalten ved siden av.
-   Nå får begge nøyaktig samme ramme og høyde, uten at bildet beskjæres
-   annerledes i filen. */
+/* ---------- Takeaways: bildet/videoen i en rolig ramme ---------- */
 .mag .takeaways__media { margin: 0; padding: clamp(1.25rem, 4vw, 2.5rem) var(--pad) 0; }
 .mag .takeaways__ramme { position: relative; box-shadow: 0 30px 60px -40px rgba(0,0,0,.6); }
 .mag .takeaways__ramme video, .mag .takeaways__ramme img {
@@ -299,7 +294,7 @@
 .mag .pq__slutt em { font-style: italic; color: var(--burgunder); }
 
 /* ==========================================================
-   Utkast 3, runde 3: mer editorial. Avgrenset til .mag.
+   Editorial typografi. Avgrenset til .mag.
    ========================================================== */
 
 /* Kapittelhode: stort kursivt romertall + tynn linje, liten sans-kicker */
@@ -356,3 +351,76 @@
 /* Sitater: tynn linje over kilden, litt mer luft */
 .mag .pq .kilde { letter-spacing: .3em; }
 @media (max-width: 979px) { .mag .f-nr { top: 6.4rem; font-size: 5rem; } }
+
+/* ==========================================================
+   Lesbarhet på mobil og desktop
+   ========================================================== */
+
+/* Sidemarg: minst 24px på telefon, mer på store skjermer, og aldri under
+   iPhone-hakket i liggende modus. */
+:root { --pad: max(clamp(1.5rem, 6.4vw, 3.5rem), calc(env(safe-area-inset-left, 0px) + 1rem), calc(env(safe-area-inset-right, 0px) + 1rem)); }
+
+/* Ingen sidelengs scroll */
+html, body { overflow-x: clip; }
+html { text-size-adjust: 100%; }
+
+/* Lange ord brytes heller enn å presse siden ut */
+.mag h1, .mag h2, .mag p, .mag dd, .mag dt, .mag figcaption, .mag blockquote, .mag li { overflow-wrap: break-word; }
+
+/* Lesbar linjelengde */
+.mag .tekst { max-width: min(37rem, 65ch); }
+.mag .qa dd { max-width: min(40rem, 65ch); }
+.mag .standfirst { max-width: min(34ch, 100%); }
+
+/* Bildetekster og tekst i fullbreddeblokker følger samme marg */
+.mag .spread .bt { padding-left: var(--pad); padding-right: var(--pad); }
+.mag .bt { margin-top: .7rem; }
+
+/* To bilder i galleriet (SEN) */
+@media (min-width: 880px) {
+  .mag .grid-asym--to > .a { grid-column: 1 / span 7; }
+  .mag .grid-asym--to > .b { grid-column: 8 / span 5; margin-top: 9rem; }
+}
+
+@media (max-width: 879px) {
+  /* Brødtekst og ingress litt roligere på telefon */
+  .mag .tekst p, .mag .qa dd { font-size: 1.03rem; line-height: 1.72; }
+  .mag .tekst > p:first-child { font-size: 1.14rem; line-height: 1.62; }
+  .mag .dropcap::first-letter, .mag .tekst > p:first-child.dropcap::first-letter { font-size: 3.4em; }
+
+  /* Overskrifter skal ikke fylle hele bredden */
+  .mag .kap-hode h2 { font-size: clamp(2rem, 9vw, 2.8rem); }
+  .mag .paris__tittel { font-size: clamp(2.1rem, 9.5vw, 3rem); }
+  .mag .pq blockquote { font-size: clamp(2rem, 9vw, 3rem); max-width: 16ch; }
+  .mag .pq__slutt { font-size: clamp(1.8rem, 8vw, 2.6rem); }
+  .mag .kap-tall { font-size: clamp(3rem, 14vw, 4rem); }
+
+  /* Paris-blokken: tekst med god luft */
+  .mag .pq-spread__tekst { padding: clamp(3rem, 12vw, 4.5rem) var(--pad); }
+  .mag .paris__uthevet { padding: 1rem 0 1rem 1rem; }
+
+  /* Kapitler: litt mindre vertikal luft, samme sidemarg */
+  .mag .kapittel { padding: clamp(3.5rem, 14vw, 5rem) 0; }
+  .mag .to-spalter { gap: 2.5rem; }
+
+  /* Galleri og kontaktark: litt mer luft mellom bildene */
+  .mag .grid-asym { gap: .9rem; }
+  .mag .kontaktark { column-gap: .9rem; }
+  .mag .kontaktark figure { margin-bottom: 1.1rem; }
+
+  /* Bildetekster: lesbare, men ikke for brede bokstavmellomrom */
+  .mag .bt { letter-spacing: .14em; }
+
+  /* Kreditering og kolofon */
+  .mag .kolofon__hode { flex-wrap: wrap; }
+}
+
+/* Kontaktark som rutenett, så bildenumrene leses i rekkefølge */
+.mag .kontaktark { columns: auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem .9rem; align-items: start; }
+.mag .kontaktark figure { margin: 0; }
+@media (max-width: 879px) { .mag .kontaktark > figure:first-child:nth-last-child(odd) { grid-column: 1 / -1; } }
+@media (min-width: 880px) {
+  .mag .kontaktark { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1.5rem 1.25rem; }
+  .mag .kontaktark > figure { grid-column: span 2; }
+  .mag .kontaktark > figure:first-child:nth-last-child(5), .mag .kontaktark > figure:first-child:nth-last-child(5) + figure { grid-column: span 3; }
+}
