@@ -1,0 +1,121 @@
+/* AVANT / Featured Edit. A cover-led fashion edition. */
+.couture{--krem:#faf8f3;--tekst:#211d1a;--espresso:#211d1a;--burgunder:#652631;background:var(--krem);color:var(--tekst)}
+.couture a:focus-visible{outline:2px solid var(--burgunder);outline-offset:5px}
+.couture-header,.couture-main{width:min(1320px,calc(100% - 80px));margin-inline:auto}
+.couture-top{height:38px;display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.couture-top a{text-decoration:none}
+.couture-wordmark{display:block;text-align:center;text-decoration:none;font:400 clamp(100px,14vw,194px)/.93 var(--serif);font-variation-settings:"opsz" 64;letter-spacing:-.065em;padding:5px .065em 22px 0;color:#211d1a}
+.couture-nav{display:flex;justify-content:center;gap:3rem;border-top:1px solid #211d1a;border-bottom:1px solid #211d1a;padding:0}
+.couture-nav a{font-size:13px;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;padding:15px 0}
+.couture-nav a:hover,.couture-nav a[aria-current]{color:var(--burgunder)}
+.couture-nav a[aria-current]{box-shadow:inset 0 -2px var(--burgunder)}
+.couture-issue{display:flex;justify-content:space-between;text-transform:uppercase;letter-spacing:.12em;font-size:12px;padding:19px 0}
+.cover-story{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(36px,6vw,84px);align-items:stretch}
+.cover-photo{display:block;position:relative;overflow:hidden;background:#d8d7d8}
+.couture .cover-photo img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:contain}
+.cover-mark{position:absolute;top:20px;left:22px;color:#211d1a;text-transform:uppercase;font-size:12px;letter-spacing:.12em}
+.cover-copy{display:flex;flex-direction:column;justify-content:space-between;padding:28px 0 0}
+.fashion-label{font-size:12px;letter-spacing:.11em;line-height:1.5;text-transform:uppercase;color:var(--burgunder);margin:0 0 17px}
+.couture h1,.couture h2,.couture h3{font-weight:400;font-variation-settings:"opsz" 48}
+.cover-copy h1{font-size:clamp(76px,8.6vw,124px);line-height:.87;letter-spacing:-.045em;margin:0 0 30px}
+.cover-copy h1 em{font-weight:400}
+.cover-copy h2{font-size:clamp(30px,3.1vw,44px);line-height:1.1;letter-spacing:-.02em;margin-bottom:18px}
+.cover-deck{font-size:16px;line-height:1.7;max-width:34ch;color:#50483f;margin:0}
+.fashion-link{display:inline-block;padding:0 0 6px;margin-top:23px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid currentColor;text-decoration:none}
+.fashion-link:hover{color:var(--burgunder)}
+.cover-next{border-top:1px solid #b8b1a6;padding-top:22px;margin-top:32px;display:grid;grid-template-columns:105px 1fr;gap:22px;align-items:center;text-decoration:none}
+.couture .cover-next img{width:105px;height:136px;object-fit:cover}
+.cover-next .fashion-label{font-size:11px;margin-bottom:8px}
+.cover-next h3{font-size:31px;line-height:1.05;margin-bottom:9px}
+.cover-next span{font-size:12px;text-decoration:underline;text-underline-offset:4px}
+.cover-credit{font-size:11px;color:#655e56;margin-top:11px;line-height:1.5}
+.fashion-section-title{display:flex;justify-content:space-between;align-items:baseline;padding:24px 0 30px;border-top:1px solid #211d1a}
+.fashion-section-title>span{font-size:12px;text-transform:uppercase;letter-spacing:.1em}
+.fashion-section-title h2{font-size:clamp(36px,4.2vw,60px);line-height:1;letter-spacing:-.035em}
+.fashion-features{margin:74px 0 86px}
+.fashion-feature-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(35px,7vw,100px);align-items:start}
+.fashion-story{display:block;text-decoration:none}
+.fashion-story-image{overflow:hidden}
+.couture .fashion-story-image img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;transition:transform .6s}
+.fashion-story:hover .fashion-story-image img{transform:scale(1.015)}
+.atelier-story{padding-top:88px}
+.fashion-story .fashion-label{margin:22px 0 10px}
+.fashion-story h3{font-size:clamp(32px,3.8vw,52px);line-height:1.15;letter-spacing:-.025em}
+.fashion-story>p:not(.fashion-label){font-size:16px;line-height:1.7;max-width:44ch;margin-top:13px;color:#50483f}
+.fashion-story .fashion-link{margin-top:17px}
+.fashion-details{margin-bottom:82px;scroll-margin-top:30px}
+.fashion-detail-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.fashion-detail-grid a{text-decoration:none}
+.couture .fashion-detail-grid img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.fashion-detail-grid h3{font-size:28px;line-height:1.2;margin-top:16px}
+.fashion-detail-grid a:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
+.fashion-interview{display:grid;grid-template-columns:1.35fr 1fr;background:#eee8de;margin:0 -40px;padding:64px 40px;gap:clamp(32px,6vw,84px);align-items:center}
+.fashion-interview h2{font-size:clamp(29px,3.4vw,48px);line-height:1.22;letter-spacing:-.025em;max-width:22ch}
+.couture .fashion-interview img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.couture-about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding:65px 0}
+.couture-about h2{font-size:clamp(38px,4.4vw,65px);line-height:1.05;letter-spacing:-.035em}
+.couture-about p{font-size:16px;line-height:1.75;max-width:48ch}
+.couture .issue-credits{margin-bottom:45px}
+.couture .issue-credits summary{font-size:13px}
+.couture .issue-credits .kolofon{background:transparent;padding:10px 0 25px}
+.couture .issue-credits .wrap{padding:0}
+.couture .bunn{background:#241d1b;margin-top:0}
+.couture .bunn__ordmerke{letter-spacing:-.055em;font-variation-settings:"opsz" 64}
+.couture-article .couture-wordmark{font-size:72px;padding:10px 0 15px}
+.couture-article .couture-top{height:30px}
+.couture-article .f-aapning{padding-top:42px}
+.couture-article .article-title{font-variation-settings:"opsz" 48;max-width:18ch;margin:auto}
+@media(min-width:1400px){.cover-copy{padding-top:48px}.cover-next{margin-bottom:0}.cover-copy h1{font-size:138px}}
+@media(max-width:1000px) and (min-width:700px){.cover-story{gap:32px;grid-template-columns:1.2fr 1fr}.cover-copy{padding-top:5px}.cover-copy h1{font-size:75px;margin-bottom:20px}.cover-copy h2{font-size:30px}.cover-deck{font-size:15px}.cover-next{grid-template-columns:70px 1fr;gap:15px;padding-top:15px;margin-top:20px}.couture .cover-next img{width:70px;height:90px}.cover-next h3{font-size:26px}.cover-next .fashion-label{font-size:10px}.fashion-link{margin-top:17px}}
+@media(max-width:699px){
+.couture-header,.couture-main{width:calc(100% - 36px)}
+.couture-top{font-size:10px;height:30px}
+.couture-wordmark{font-size:clamp(90px,25vw,160px);line-height:1;padding:5px .065em 15px 0}
+.couture-nav{gap:0;justify-content:space-between}
+.couture-nav a{font-size:11px;letter-spacing:.04em;padding:13px 0}
+.couture-issue{font-size:10px;padding:15px 0}
+.cover-story{grid-template-columns:1fr;gap:0}
+.cover-mark{font-size:10px;left:15px;top:14px}
+.cover-copy{padding:26px 0 0}
+.cover-intro{display:grid;grid-template-columns:1fr 1fr;gap:0 15px;align-items:start}
+.cover-intro .fashion-label{grid-column:1/-1;margin-bottom:18px;font-size:11px}
+.cover-copy h1{font-size:clamp(61px,16vw,90px);grid-row:2;line-height:.9;margin:0}
+.cover-copy h2{font-size:clamp(25px,6.4vw,37px);margin:0 0 12px}
+.cover-deck{grid-column:1/-1;font-size:16px;line-height:1.65;margin-top:18px;max-width:none}
+.cover-intro>.fashion-link{grid-column:1/-1;font-size:12px;justify-self:start;margin-top:17px}
+.cover-next{margin-top:30px;grid-template-columns:85px 1fr;gap:18px;padding-top:22px}
+.couture .cover-next img{width:85px;height:105px}
+.cover-next h3{font-size:29px}.cover-next h3 br{display:none}
+.cover-credit{font-size:10px;margin-top:21px}
+.fashion-features{margin:47px 0 48px}
+.fashion-section-title{display:block;padding:17px 0 24px}
+.fashion-section-title>span{font-size:10px;display:block;margin-bottom:10px}
+.fashion-section-title h2{font-size:37px}
+.fashion-feature-grid{grid-template-columns:1fr;gap:38px}
+.atelier-story{padding-top:0}
+.couture .fashion-story-image img{aspect-ratio:4/4.8}
+.fashion-story h3{font-size:36px}
+.fashion-story .fashion-label{margin-top:17px;font-size:11px}
+.fashion-story>p:not(.fashion-label){font-size:16px;margin-top:9px}
+.fashion-details{margin-bottom:45px}
+.fashion-detail-grid{gap:10px}
+.fashion-detail-grid h3{font-size:19px;margin-top:11px}
+.couture .fashion-detail-grid img{aspect-ratio:3/4}
+.fashion-details>.fashion-link{font-size:11px}
+.fashion-interview{margin:0 -18px;padding:30px 18px;grid-template-columns:1fr;gap:27px}
+.fashion-interview h2{font-size:32px;max-width:none}
+.fashion-interview>img{grid-row:1}
+.couture .fashion-interview img{aspect-ratio:1.2;object-position:center 30%}
+.couture-about{grid-template-columns:1fr;gap:19px;padding:38px 0}
+.couture-about h2{font-size:46px}.couture-about p{font-size:16px}
+.couture-article .couture-wordmark{font-size:60px;padding:5px 0 12px}
+.couture-article .f-aapning{padding-top:25px}
+}
+@media(prefers-reduced-motion:reduce){.fashion-story-image img{transition:none}}
+
+/* Reader-led introductions. Detail photographs remain inside the report. */
+.cover-copy h2{max-width:11ch}
+.cover-next h3{font-size:28px;max-width:15ch}
+.interview-deck{font-size:16px;line-height:1.75;max-width:46ch;margin-top:23px;color:#50483f}
+.fashion-interview{scroll-margin-top:30px}
+@media(max-width:699px){.cover-intro{display:block}.cover-copy h1{font-size:64px;margin:0 0 20px}.cover-copy h1 br{display:none}.cover-copy h1 em{margin-left:.17em}.cover-copy h2{font-size:36px;max-width:13ch}.cover-next h3{font-size:26px}.cover-deck{margin-top:14px}.fashion-interview h2{font-size:34px}.interview-deck{margin-top:18px}}

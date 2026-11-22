@@ -1,0 +1,56 @@
+{
+  "edition": "Utgave 01",
+  "season": "Høst 2026",
+  "cover": "sen-passform",
+  "secondary": "klyo-redesign",
+  "brands": [
+    {
+      "id": "sen-oslo",
+      "name": "SEN Oslo",
+      "designer": "Sheila Brox",
+      "discipline": "Skreddersøm",
+      "description": "Dresser tilpasset kundens mål, med valg av farge og design.",
+      "image": "assets/magasin/sen-oslo/design-marine-sloyfe.jpg",
+      "alt": "Marineblå blazer med gul sløyfe fra SEN Oslo."
+    },
+    {
+      "id": "klyo",
+      "name": "Klyo",
+      "designer": "Kulani Premadasa",
+      "discipline": "Redesign",
+      "description": "Klær laget av blant annet duker, gardiner og overskuddsmaterialer.",
+      "image": "assets/magasin/klyo/klyo-bluser.jpg",
+      "alt": "Broderte bluser fra Klyo."
+    }
+  ],
+  "articles": [
+    {
+      "id": "sen-passform",
+      "brand": "sen-oslo",
+      "title": "Når dressen ikke sitter",
+      "type": "Atelierbesøk",
+      "url": "featured-sen-oslo.html",
+      "issue": "Utgave 01",
+      "image": "assets/magasin/sen-oslo/design-marine-sloyfe.jpg",
+      "alt": "Marineblå blazer med stor gul sløyfe fra SEN Oslo.",
+      "minutes": 3,
+      "deck": "Riktig over skuldrene, for lang i ermene? Hos SEN Oslo begynner dressen med dine mål. Vi besøker Sheila Brox og ser hvordan farge, snitt og passform blir tilpasset kunden.",
+      "credit": "Sheila Brox / SEN Oslo"
+    },
+    {
+      "id": "klyo-redesign",
+      "brand": "klyo",
+      "title": "Fra spisebordet til garderoben",
+      "type": "Intervju",
+      "url": "featured-klyo.html",
+      "issue": "Utgave 01",
+      "image": "assets/magasin/klyo/klyo-stativ.jpg",
+      "alt": "Klyos broderte og mønstrede plagg på stativ.",
+      "minutes": 4,
+      "deck": "Kulani Premadasa startet sin første virksomhet i Sri Lanka. I Norge begynte hun på nytt med Klyo, der duker, gardiner og overskuddsmaterialer blir til klær. Vi snakker med henne om å velge redesign – og om å starte igjen.",
+      "credit": "Klyo / Kulani Premadasa",
+      "portrait": "assets/magasin/klyo/klyo-portrett.jpg",
+      "portraitAlt": "Kulani Premadasa ved arbeidsbordet sitt."
+    }
+  ]
+}

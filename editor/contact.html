@@ -1,0 +1,11 @@
+<form class="skjema" id="kontaktskjema" aria-label="Kontakt AVANT" action="mailto:Tominekrogh199@gmail.com" method="post" enctype="text/plain">
+<p class="form-instruction">Feltene navn, e-post og melding må fylles ut.</p><div class="skjema__rad">
+<div class="felt"><label for="navn">Navn</label><input autocomplete="name" maxlength="120" id="navn" aria-describedby="navn-error" name="navn" required="" type="text"/><span class="field-error" id="navn-error" hidden></span></div>
+<div class="felt"><label for="epost">E-post</label><input autocomplete="email" maxlength="254" id="epost" aria-describedby="epost-error" name="epost" autocapitalize="none" spellcheck="false" inputmode="email" required="" type="email"/><span class="field-error" id="epost-error" hidden></span></div>
+</div>
+<div class="felt"><label for="merke">Merke / Instagram <span>(valgfritt)</span></label><input maxlength="160" id="merke" autocapitalize="none" name="merke" placeholder="@" type="text"/></div>
+<div class="felt"><label for="melding">Melding</label><textarea maxlength="4000" id="melding" aria-describedby="melding-error" name="melding" required=""></textarea><span class="field-error" id="melding-error" hidden></span></div>
+<p class="skjema__note">Skjemaet åpner e-postprogrammet ditt med meldingen ferdig utfylt. Ingenting lagres på nettsiden.</p>
+<p aria-live="polite" class="skjema__status" id="skjema-status" role="status"></p>
+<div><button class="knapp knapp--mork" type="submit">Åpne e-postutkast</button></div>
+</form>

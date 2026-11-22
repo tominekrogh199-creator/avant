@@ -1,0 +1,169 @@
+/* Featured Edit · magazine edition. */
+.publication { --krem:#f8f6f1; --krem-2:#eee9e0; --tekst:#25211e; --espresso:#25211e; --burgunder:#6b2431; --pad:clamp(1.1rem,3vw,2.5rem); --maks:1280px; background:var(--krem); }
+.publication h1,.publication h2,.publication h3 { font-variation-settings:"opsz" 24; font-weight:400; }
+.publication-header { max-width:1280px; margin:0 auto; padding:0 var(--pad); }
+.publication-top { display:flex; justify-content:space-between; align-items:center; min-height:38px; font-size:.75rem; gap:1rem; border-bottom:1px solid #25211e24; }
+.publication-top a { text-decoration:none; }
+.publication-top a:first-child { font-weight:500; }
+.publication-top span { color:#675f57; }
+.publication-logo { display:block; text-align:center; font:400 clamp(4.4rem,8vw,7rem)/1.08 var(--serif); font-variation-settings:"opsz" 40; letter-spacing:.15em; padding:.6rem 0 .8rem .15em; text-decoration:none; }
+.publication-nav { display:flex; justify-content:center; align-items:center; gap:2.5rem; border-top:1px solid #25211e; border-bottom:1px solid #25211e; min-height:43px; }
+.publication-nav a { display:block; padding:.65rem 0; font-size:.875rem; text-decoration:none; }
+.publication-nav a:hover,.publication-nav a[aria-current] { color:var(--burgunder); text-decoration:underline; text-underline-offset:6px; }
+.publication .mag { padding:0 var(--pad); max-width:1280px; margin:0 auto; }
+.issue-strip { display:flex; justify-content:space-between; align-items:baseline; gap:1rem; padding:1.3rem 0 .9rem; }
+.issue-strip h1 { font:500 .8rem/1.4 var(--sans); text-transform:uppercase; letter-spacing:.08em; }
+.issue-strip > span { font-size:.75rem; color:#675f57; }
+.front-grid { display:grid; grid-template-columns:minmax(0,2.1fr) minmax(0,1fr); gap:2rem; padding-bottom:2.5rem; }
+.story-link { display:block; text-decoration:none; }
+.story-link img { transition:filter .25s; }
+.story-link:hover h2,.story-link:hover h3 { text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:5px; }
+.story-link:hover img { filter:brightness(.96); }
+.lead-photo { position:relative; aspect-ratio:1.85; overflow:hidden; }
+.publication .lead-photo img { height:100%; width:100%; object-fit:cover; object-position:50% 45%; }
+.photo-tag { position:absolute; left:1rem; bottom:1rem; padding:.35rem .6rem; background:var(--krem); color:var(--tekst); font-size:.75rem; }
+.rubric { font:500 .75rem/1.5 var(--sans); text-transform:uppercase; letter-spacing:.075em; color:var(--burgunder); margin:1rem 0 .45rem; }
+.front-lead h2 { font-size:clamp(2.2rem,3.8vw,3.6rem); line-height:1.08; letter-spacing:-.025em; }
+.front-deck { font-size:1rem; line-height:1.6; max-width:57ch; margin:.8rem 0 0; color:#504b45; }
+.story-byline { font-size:.75rem; color:#675f57; margin:1rem 0 0; display:flex; gap:1rem; align-items:center; flex-wrap:wrap; }
+.story-byline span { border-left:1px solid #c5beb4; padding-left:1rem; }
+.front-side { padding-left:1.7rem; border-left:1px solid #cfc7bd; }
+.side-photo { aspect-ratio:1.45; overflow:hidden; }
+.publication .side-photo img { height:100%; width:100%; object-fit:cover; object-position:50% 30%; }
+.front-side h2 { font-size:clamp(1.8rem,2.5vw,2.6rem); letter-spacing:-.025em; }
+.front-side article p:not(.rubric):not(.story-byline) { font-size:.95rem; line-height:1.6; margin:.7rem 0 0; color:#504b45; }
+.issue-note { border-top:1px solid #cfc7bd; margin-top:1.6rem; padding-top:1.1rem; }
+.issue-note .rubric { margin:0; }
+.issue-note p { font-size:.875rem; line-height:1.65; margin:.5rem 0; }
+.issue-note a { font-size:.8rem; }
+.section-rule { display:flex; align-items:baseline; justify-content:space-between; gap:1rem; padding:.9rem 0 1.3rem; border-top:2px solid #25211e; }
+.section-rule h2 { font-size:2rem; }
+.section-rule > span { font-size:.75rem; color:#675f57; }
+.detail-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.5rem; }
+.publication .detail-card img { aspect-ratio:1.25; object-fit:cover; object-position:center 40%; }
+.detail-card h3 { font-size:clamp(1.4rem,2.1vw,1.85rem); letter-spacing:-.015em; line-height:1.2; }
+.detail-card p:last-child { font-size:.9rem; line-height:1.6; margin:.6rem 0 0; color:#504b45; }
+.detail-section { padding-bottom:2.8rem; scroll-margin-top:1rem; }
+.interview-extract { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.55fr); border-top:1px solid #cfc7bd; border-bottom:1px solid #cfc7bd; padding:2rem 0; gap:clamp(2rem,5vw,4.5rem); align-items:center; }
+.portrait-link { display:block; }
+.publication .portrait-link img { width:100%; aspect-ratio:1.25; object-fit:cover; object-position:center 30%; }
+.extract-copy .rubric { margin-top:0; }
+.extract-copy h2 { font-size:clamp(1.8rem,3vw,2.9rem); line-height:1.2; max-width:26ch; }
+.extract-copy > p:not(.rubric) { font-size:.95rem; max-width:51ch; line-height:1.7; margin-top:1rem; }
+.text-link { display:inline-block; font-size:.875rem; margin-top:1.2rem; text-underline-offset:5px; padding:.25rem 0; }
+.about-issue { padding:2rem 0; display:grid; grid-template-columns:1fr 1.55fr; gap:clamp(2rem,5vw,4.5rem); }
+.about-issue .rubric { margin:0 0 .7rem; }
+.about-issue h2 { font-size:1.9rem; }
+.about-issue > div > p:not(.rubric) { font-size:.9rem; line-height:1.7; margin:0 0 .8rem; max-width:62ch; }
+.issue-credits { margin-bottom:2rem; border-top:1px solid #cfc7bd; border-bottom:1px solid #cfc7bd; }
+.issue-credits summary { padding:.9rem 0; font-size:.8rem; cursor:pointer; }
+.publication .mag .issue-credits .kolofon { background:transparent; padding:.5rem 0 1.5rem; }
+.issue-credits .wrap { padding:0; }
+.publication .bunn { background:#25211e; margin-top:1rem; }
+.publication .bunn__ordmerke { font-variation-settings:"opsz" 32; }
+/* Article pages use a compact masthead and a headline-led opening. */
+.publication-article .publication-logo { font-size:3.6rem; padding:.4rem 0 .55rem .15em; }
+.publication-article .publication-top { min-height:32px; }
+.publication-article .f-aapning { display:flex; flex-direction:column; padding:1.2rem 0 0; max-width:none; gap:1.7rem; }
+.publication-article .f-aapning__tekst { order:-1; padding:0; display:block; max-width:900px; margin:auto; text-align:center; }
+.publication-article .f-meta { justify-content:center; gap:.8rem; border:0; padding:0; margin-bottom:1.3rem; font-size:.75rem; }
+.publication-article .f-meta a { text-decoration:underline; }
+.publication-article .article-brand { margin-bottom:.65rem; font-size:.75rem; letter-spacing:.08em; }
+.publication-article .article-title { font-size:clamp(2.5rem,4.6vw,4.2rem); line-height:1.1; letter-spacing:-.025em; }
+.publication-article .standfirst { font-size:1rem; line-height:1.7; max-width:60ch; margin:1rem auto 0; }
+.publication-article .byline { display:flex; justify-content:center; flex-wrap:wrap; gap:.3rem 1rem; border:0; padding:0; margin-top:1rem; font-size:.75rem; }
+.publication-article .f-aapning__bilde { width:100%; aspect-ratio:2.15; }
+.publication-article .f-aapning__bilde img { object-position:50% 42%; }
+.publication-article .article-contents { display:flex; justify-content:center; flex-wrap:wrap; gap:1rem; padding:1.1rem 0; border-bottom:1px solid #cfc7bd; font-size:.8rem; }
+.article-contents > span { color:#675f57; }
+.publication-article .mag .kapittel { padding:3rem 0; background:transparent; border-bottom:1px solid #cfc7bd; }
+.publication-article .to-spalter { grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:clamp(2rem,5vw,5rem); align-items:start; }
+.publication-article .to-spalter--snu > :first-child { order:0; }
+.publication-article .kapittel .wrap { padding:0; }
+.publication-article .mag .kap-hode h2 { font-size:clamp(1.8rem,2.8vw,2.4rem); }
+.publication-article .mag .tekst p,.publication-article .mag .qa dd { font-size:1.0625rem; line-height:1.85; }
+.publication-article .klistre { max-width:440px; width:100%; justify-self:end; }
+.publication-article .mag .kap-hode--neste { margin-top:2rem; }
+.publication-article .product-spread { display:flex; gap:1.8rem; align-items:end; padding:1.5rem 0; border-bottom:1px solid #cfc7bd; margin:0; }
+.publication-article .mag .product-spread img { width:auto; max-width:65%; max-height:440px; }
+.publication-article .product-spread figcaption { max-width:30ch; padding-bottom:.5rem; }
+.publication-article .pq-spread { margin:2rem 0; grid-template-columns:1fr 1.3fr; }
+.publication-article .editor-video { padding:1.5rem; }
+.publication-article .editor-video video { max-height:430px; width:auto; max-width:100%; }
+.publication-article .pq-spread__tekst { padding:2.5rem; }
+.publication-article .mag .pq-spread blockquote { font-size:clamp(1.8rem,2.6vw,2.5rem); line-height:1.25; }
+.publication-article .spread { margin:1.5rem 0; padding:0; }
+.publication-article .mag .kred { padding:2rem 0; gap:2rem; }
+.publication-article .mag .kred .standfirst { text-align:left; margin-left:0; }
+.publication-article .next-story { padding:1.5rem 0; }
+.publication-article .mag .next-story img { width:110px; height:135px; }
+.publication-article .next-brand { font-size:1.8rem; }
+@media(max-width:879px){
+ .publication-nav { gap:1.5rem; }
+ .front-grid { grid-template-columns:minmax(0,1.6fr) minmax(0,1fr); gap:1.4rem; }
+ .front-side { padding-left:1.3rem; }
+ .front-lead h2 { font-size:2.3rem; }
+ .front-side h2 { font-size:1.8rem; }
+ .publication-article .mag .to-spalter { grid-template-columns:1.2fr 1fr; }
+ .publication-article .mag .pq-spread__tekst { padding:1.7rem; }
+}
+@media(max-width:639px){
+ .publication-top { font-size:.7rem; min-height:34px; gap:.5rem; }
+ .publication-top > a:nth-child(2) { display:none; }
+ .publication-logo { font-size:4.5rem; padding:.5rem 0 .6rem .15em; }
+ .publication-nav { gap:0; justify-content:space-between; min-height:42px; }
+ .publication-nav a { font-size:.75rem; padding:.75rem 0; }
+ .issue-strip { padding:1.1rem 0 .8rem; }
+ .issue-strip > span { display:none; }
+ .front-grid { grid-template-columns:1fr; padding-bottom:2rem; gap:1.4rem; }
+ .lead-photo { aspect-ratio:1.3; }
+ .photo-tag { font-size:.7rem; left:.6rem; bottom:.6rem; }
+ .front-lead h2 { font-size:2.3rem; }
+ .front-deck { font-size:.95rem; }
+ .front-side { border-left:0; padding-left:0; border-top:1px solid #cfc7bd; padding-top:1.4rem; }
+ .front-side article .story-link { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:0 1rem; }
+ .side-photo { grid-column:1; grid-row:1/6; height:100%; min-height:210px; aspect-ratio:auto; }
+ .front-side .rubric { margin:0 0 .45rem; font-size:.7rem; }
+ .front-side h2 { font-size:1.75rem; }
+ .front-side article p:not(.rubric):not(.story-byline) { font-size:.875rem; line-height:1.6; }
+ .front-side .story-byline { font-size:.7rem; gap:.3rem .5rem; }
+ .front-side .story-byline span { border:0; padding:0; }
+ .issue-note { display:none; }
+ .section-rule { padding:.8rem 0 1rem; }
+ .section-rule h2 { font-size:1.8rem; }
+ .section-rule > span { font-size:.7rem; max-width:17ch; text-align:right; }
+ .detail-grid { grid-template-columns:1fr; gap:1.2rem; }
+ .detail-card { display:grid; grid-template-columns:110px minmax(0,1fr); gap:0 1rem; padding-bottom:1.2rem; border-bottom:1px solid #cfc7bd; }
+ .publication .detail-card img { grid-row:1/5; aspect-ratio:1/1.25; height:100%; max-height:160px; }
+ .detail-card .rubric { margin:0 0 .3rem; font-size:.7rem; }
+ .detail-card h3 { font-size:1.5rem; }
+ .detail-card p:last-child { font-size:.85rem; margin-top:.45rem; }
+ .detail-section { padding-bottom:1.5rem; }
+ .interview-extract { grid-template-columns:1fr; gap:1.2rem; padding:1.5rem 0; }
+ .publication .portrait-link img { aspect-ratio:1.35; }
+ .extract-copy h2 { font-size:2rem; }
+ .about-issue { grid-template-columns:1fr; gap:1rem; padding:1.5rem 0; }
+ .about-issue h2 { font-size:1.6rem; }
+ .publication-article .publication-logo { font-size:3rem; }
+ .publication-article .article-title { font-size:2.5rem; }
+ .publication-article .f-aapning { gap:1.2rem; }
+ .publication-article .f-meta { font-size:.7rem; margin-bottom:1rem; }
+ .publication-article .byline { display:block; }
+ .publication-article .byline span { display:block; margin-top:.2rem; }
+ .publication-article .f-aapning__bilde { aspect-ratio:1.3; }
+ .publication-article .mag .kapittel { padding:2rem 0; }
+ .publication-article .mag .to-spalter { grid-template-columns:1fr; gap:1.5rem; }
+ .publication-article .klistre { max-width:none; }
+ .publication-article .mag .kap-hode h2 { font-size:1.9rem; }
+ .publication-article .product-spread { gap:1rem; }
+ .publication-article .product-spread figcaption { font-size:.7rem; }
+ .publication-article .pq-spread { grid-template-columns:1fr; }
+ .publication-article .mag .pq-spread__tekst { padding:2rem 1.5rem; }
+ .publication-article .next-story { gap:1rem; }
+ .publication-article .mag .next-story img { width:85px; height:110px; }
+}
+
+@media(max-width:359px){
+ .publication-nav { flex-wrap:wrap; justify-content:center; gap:0 1.25rem; padding:.3rem 0; }
+ .publication-nav a { padding:.4rem 0; }
+}

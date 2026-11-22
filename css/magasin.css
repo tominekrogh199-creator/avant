@@ -1,0 +1,426 @@
+/* AVANT – Featured Edit (magasin). Lenkes inn etter style.css. */
+.lesefremdrift { position: fixed; top: 0; left: 0; height: 2px; width: 100%; transform-origin: 0 50%; transform: scaleX(0); background: var(--burgunder); z-index: 60; pointer-events: none; }
+.topp--fast { background: rgba(244,239,230,.94); color: var(--espresso); box-shadow: 0 1px 0 rgba(43,33,27,.1); }
+@supports (backdrop-filter: blur(8px)) { .topp--fast { background: rgba(244,239,230,.82); backdrop-filter: blur(12px); } }
+.mag { padding-top: 64px; }
+@media (min-width: 880px) { .mag { padding-top: 76px; } }
+.mag img { display: block; width: 100%; height: auto; }
+.mag figure { margin: 0; }
+.bt { margin-top: .75rem; color: var(--tekst-dempet); font-size: .62rem; letter-spacing: .22em; }
+.mork .bt { color: var(--krem-dempet); }
+.ramme { position: relative; overflow: hidden; background: var(--sand); }
+.ramme img { width: 100%; height: 100%; object-fit: cover; }
+.hairline { border: 0; border-top: 1px solid rgba(43,33,27,.22); margin: 0; }
+
+/* ---------- Omslag (featured.html) ---------- */
+.omslag-wrap { display: grid; gap: 3rem; padding: clamp(1.5rem, 4vw, 3rem) 0 clamp(4rem, 10vw, 7rem); }
+@media (min-width: 980px) { .omslag-wrap { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(3rem, 6vw, 6rem); align-items: start; } }
+.omslag { position: relative; aspect-ratio: 3 / 4; overflow: hidden; background: #C9CBD0; color: var(--espresso); box-shadow: 0 40px 80px -50px rgba(43,33,27,.55); }
+.omslag > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; }
+.omslag::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(244,239,230,.0) 60%, rgba(33,25,19,.55) 100%); }
+.omslag__topp { position: absolute; top: 0; left: 0; right: 0; z-index: 1; padding: 4% 6% 0; text-align: center; }
+.omslag__masthead { font-family: var(--serif); font-weight: 400; font-variation-settings: "opsz" 96; font-size: clamp(4.4rem, 19vw, 11rem); line-height: .82; letter-spacing: .02em; margin: 0; }
+.omslag__under { display: flex; justify-content: space-between; align-items: baseline; margin-top: .6rem; padding-top: .45rem; border-top: 1px solid currentColor; font-size: .58rem; }
+.omslag__under em { font-family: var(--serif); font-style: italic; font-size: 1.25rem; letter-spacing: 0; text-transform: none; }
+.omslag__linjer { position: absolute; z-index: 1; left: 6%; right: 6%; bottom: 5%; color: #F7F2EA; display: grid; gap: .9rem; }
+.omslag__linjer p { margin: 0; }
+.coverlinje b { display: block; font-family: var(--sans); font-weight: 500; font-size: .6rem; letter-spacing: .3em; text-transform: uppercase; }
+.coverlinje span { font-family: var(--serif); font-style: italic; font-size: clamp(1.1rem, 3.6vw, 1.7rem); line-height: 1.15; }
+.omslag__sitat { position: absolute; z-index: 1; right: 6%; top: 46%; max-width: 30%; text-align: right; font-family: var(--serif); font-style: italic; font-size: clamp(1rem, 2.6vw, 1.5rem); line-height: 1.1; color: var(--espresso); }
+.redaksjon h2 { font-size: clamp(2rem, 5vw, 3rem); }
+.redaksjon .dropcap::first-letter { font-family: var(--serif); float: left; font-size: 4.2em; line-height: .78; padding: .08em .1em 0 0; color: var(--burgunder); }
+.register { list-style: none; margin: 2.5rem 0 0; padding: 0; border-top: 1px solid var(--espresso); }
+.register li { border-bottom: 1px solid rgba(43,33,27,.2); }
+.register a { display: grid; grid-template-columns: 2.6rem 1fr auto; gap: 1rem; align-items: baseline; padding: 1.15rem 0; text-decoration: none; }
+.register .nr { font-family: var(--serif); font-style: italic; color: var(--burgunder); }
+.register strong { display: block; font-family: var(--serif); font-weight: 400; font-size: clamp(1.4rem, 3.6vw, 2rem); letter-spacing: .14em; text-transform: uppercase; line-height: 1.1; }
+.register span.t { display: block; font-family: var(--serif); font-style: italic; color: var(--tekst-dempet); margin-top: .2rem; }
+.register a:hover strong { color: var(--burgunder); }
+.register .pil { align-self: center; }
+.innhold-liste { list-style: none; margin: 2rem 0 0; padding: 0; border-top: 1px solid var(--espresso); }
+.innhold-liste li { display: grid; grid-template-columns: 3rem 1fr auto; gap: 1rem; align-items: baseline; padding: 1.1rem 0; border-bottom: 1px solid rgba(43,33,27,.2); }
+.innhold-liste a { font-family: var(--serif); font-size: clamp(1.3rem, 3.5vw, 1.8rem); text-decoration: none; letter-spacing: .1em; text-transform: uppercase; }
+.innhold-liste a:hover { color: var(--burgunder); }
+.innhold-liste .nr { font-family: var(--serif); font-style: italic; color: var(--burgunder); }
+
+/* Inngangsoppslag på landing */
+.aapnere { display: grid; gap: 5rem; }
+.aapner { display: grid; gap: 1.75rem; text-decoration: none; }
+@media (min-width: 880px) { .aapner { grid-template-columns: 7fr 5fr; gap: clamp(2.5rem, 5vw, 5rem); align-items: end; } .aapner--snu > :first-child { order: 2; } }
+.aapner .ramme { aspect-ratio: 4 / 5; }
+.aapner:hover img { transform: scale(1.025); }
+.aapner img { transition: transform 1.6s var(--ease); }
+.ordmerke-merke { font-family: var(--serif); font-weight: 400; font-variation-settings: "opsz" 96; text-transform: uppercase; letter-spacing: .12em; line-height: .9; margin: 0; font-size: clamp(3.4rem, 13vw, 8.5rem); }
+.aapner .ordmerke-merke { font-size: clamp(3rem, 10vw, 6.5rem); }
+.aapner__tittel { font-family: var(--serif); font-style: italic; font-size: clamp(1.5rem, 3.6vw, 2.2rem); line-height: 1.2; margin: 1rem 0 0; }
+.aapner p { color: var(--tekst-dempet); max-width: 42ch; }
+
+/* ---------- Feature-åpning ---------- */
+.f-aapning { display: grid; }
+@media (min-width: 980px) { .f-aapning { grid-template-columns: 1fr 1fr; min-height: calc(100svh - 76px); } }
+.f-aapning__bilde { position: relative; min-height: 70svh; background: var(--sand); }
+.f-aapning__bilde img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; }
+@media (min-width: 980px) { .f-aapning__bilde { min-height: 0; } }
+.f-aapning__tekst { display: flex; flex-direction: column; justify-content: space-between; gap: 2.5rem; padding: clamp(2.5rem, 6vw, 4.5rem) var(--pad); }
+.f-meta { display: flex; justify-content: space-between; gap: 1rem; padding-bottom: .9rem; border-bottom: 1px solid var(--espresso); }
+.f-aapning .ordmerke-merke { margin-top: auto; }
+.f-tittel { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(1.9rem, 4.4vw, 3.3rem); line-height: 1.08; margin: 1.1rem 0 0; color: var(--burgunder); }
+.standfirst { font-family: var(--serif); font-size: clamp(1.15rem, 2.4vw, 1.4rem); line-height: 1.45; margin: 1.5rem 0 0; max-width: 34ch; }
+.byline { display: grid; gap: .35rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(43,33,27,.25); color: var(--tekst-dempet); }
+
+/* ---------- Kapitler og tekst ---------- */
+.kapittel { padding: clamp(4.5rem, 11vw, 8rem) 0; }
+.kap-hode { display: grid; gap: .5rem; margin-bottom: clamp(2rem, 5vw, 3.5rem); }
+.kap-nr { font-family: var(--serif); font-style: italic; color: var(--burgunder); font-size: 1.15rem; }
+.kap-hode h2 { font-size: clamp(2.3rem, 6.5vw, 4.4rem); }
+.kap-hode h2 em { font-style: italic; }
+.tekst { max-width: 37rem; }
+.tekst p { font-size: 1.06rem; line-height: 1.75; }
+.dropcap::first-letter { font-family: var(--serif); float: left; font-size: 4.6em; line-height: .78; padding: .09em .1em 0 0; color: var(--burgunder); }
+.to-spalter { display: grid; gap: 3rem; }
+@media (min-width: 980px) { .to-spalter { grid-template-columns: 5fr 7fr; gap: clamp(3rem, 7vw, 7rem); align-items: start; } .to-spalter--snu > :first-child { order: 2; } .klistre { position: sticky; top: 110px; } }
+
+/* Q&A */
+.qa { margin: 0; }
+.qa dt { margin-top: 2.6rem; padding-top: 1.1rem; border-top: 1px solid rgba(43,33,27,.18); font-family: var(--serif); font-style: italic; font-size: clamp(1.3rem, 3vw, 1.6rem); line-height: 1.3; }
+.qa dt:first-child { margin-top: 0; }
+.qa dd { margin: .8rem 0 0; font-size: 1.06rem; line-height: 1.75; }
+.qa .hvem { display: block; font-family: var(--sans); font-style: normal; font-size: .6rem; font-weight: 500; letter-spacing: .3em; text-transform: uppercase; color: var(--burgunder); margin-bottom: .45rem; }
+.qa dd .hvem { color: var(--tekst-dempet); }
+.notis { font-size: .85rem; color: var(--tekst-dempet); border-left: 1px solid var(--burgunder); padding-left: 1rem; margin-bottom: 2.5rem; max-width: 34rem; }
+
+/* Bildeoppsett */
+.spread { position: relative; }
+.spread img { width: 100%; height: auto; }
+.spread .bt { padding: 0 var(--pad); }
+.spread--hoy img { height: 92svh; object-fit: cover; }
+.grid-asym { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; }
+.grid-asym > .stor { grid-column: 1 / -1; }
+@media (min-width: 880px) {
+  .grid-asym { grid-template-columns: repeat(12, 1fr); gap: 1.5rem; align-items: start; }
+  .grid-asym > .a { grid-column: 1 / span 7; }
+  .grid-asym > .b { grid-column: 9 / span 4; margin-top: 12rem; }
+  .grid-asym > .c { grid-column: 3 / span 4; margin-top: -6rem; }
+  .grid-asym > .d { grid-column: 8 / span 5; margin-top: 4rem; }
+  .grid-asym > .stor { grid-column: 1 / -1; }
+}
+.trio { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+.trio > :first-child { grid-column: 1 / -1; }
+@media (min-width: 880px) { .trio { grid-template-columns: 1.25fr 1fr 1fr; gap: 1.5rem; align-items: end; } .trio > :first-child { grid-column: auto; } .trio > :nth-child(2) { margin-bottom: 4rem; } }
+
+/* Pull quotes */
+.pq { padding: clamp(5rem, 13vw, 9rem) 0; text-align: center; }
+.pq blockquote { margin: 0 auto; max-width: 18ch; font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(2.2rem, 7.4vw, 5.6rem); line-height: 1.05; }
+.pq .kilde { margin-top: 2rem; }
+.pq .strek { display: block; width: 3.5rem; height: 1px; background: var(--burgunder); margin: 2rem auto 0; }
+.pq-spread { display: grid; background: var(--espresso); color: var(--krem); }
+@media (min-width: 880px) { .pq-spread { grid-template-columns: 1fr 1fr; min-height: 100svh; } }
+.pq-spread .ramme { min-height: 70svh; }
+.pq-spread .ramme img { position: absolute; inset: 0; }
+.pq-spread__tekst { display: flex; flex-direction: column; justify-content: center; padding: clamp(3.5rem, 9vw, 6rem) var(--pad); }
+.pq-spread blockquote { margin: 0; font-family: var(--serif); font-style: italic; font-size: clamp(3.4rem, 11vw, 8.5rem); line-height: .95; color: #F3E3D3; }
+.pq-spread p { color: var(--krem-dempet); max-width: 36ch; }
+
+/* Takeaways */
+.takeaways { background: var(--espresso); color: var(--krem); }
+.takeaways__inner { display: grid; }
+@media (min-width: 980px) { .takeaways__inner { grid-template-columns: 5fr 7fr; } }
+.takeaways video, .takeaways img { display: block; width: 100%; height: 100%; object-fit: cover; aspect-ratio: 9 / 16; max-height: calc(100svh - 64px); }
+@media (min-width: 880px) { .takeaways video, .takeaways img { max-height: calc(100svh - 80px); } }
+.takeaways img { object-position: 50% 0; }
+.takeaways__tekst { padding: clamp(3.5rem, 9vw, 6.5rem) var(--pad); align-self: center; }
+.takeaways__boks { border: 1px solid rgba(244,239,230,.35); padding: clamp(1.5rem, 4vw, 2.75rem); margin-top: 2rem; }
+.takeaways h2 { font-size: clamp(2.2rem, 6vw, 3.8rem); }
+.takeaways h2 em { font-style: italic; color: #E3C9B5; }
+.tk { list-style: none; margin: 0; padding: 0; counter-reset: tk; }
+.tk li { counter-increment: tk; display: grid; grid-template-columns: 2.75rem 1fr; padding: 1.15rem 0; border-bottom: 1px solid rgba(244,239,230,.18); }
+.tk li:first-child { padding-top: 0; } .tk li:last-child { border-bottom: 0; padding-bottom: 0; }
+.tk li::before { content: counter(tk, upper-roman) "."; font-family: var(--serif); font-style: italic; color: #D9A3A9; font-size: 1.1rem; line-height: 1.45; }
+.tk strong { display: block; font-family: var(--serif); font-weight: 400; font-size: clamp(1.2rem, 3vw, 1.45rem); line-height: 1.3; }
+.tk span { display: block; margin-top: .3rem; color: var(--krem-dempet); font-size: .95rem; }
+
+/* Kontaktark-galleri */
+.kontaktark { columns: 2; column-gap: .75rem; }
+.kontaktark figure { break-inside: avoid; margin-bottom: .75rem; }
+@media (min-width: 880px) { .kontaktark { columns: 3; column-gap: 1.5rem; } .kontaktark figure { margin-bottom: 1.5rem; } }
+
+/* Kreditering */
+.kred { display: grid; gap: 2.5rem; padding: clamp(3.5rem, 9vw, 6rem) 0; }
+@media (min-width: 880px) { .kred { grid-template-columns: 1fr 1fr; } }
+.kred dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: .65rem 1.75rem; border-top: 1px solid var(--espresso); padding-top: 1.1rem; }
+.kred dt { font-size: .62rem; letter-spacing: .26em; text-transform: uppercase; color: var(--tekst-dempet); padding-top: .25rem; }
+.kred dd { margin: 0; font-family: var(--serif); font-size: 1.1rem; }
+.neste { display: grid; position: relative; min-height: 78svh; align-items: end; text-decoration: none; color: #F7F2EA; background: var(--espresso); overflow: hidden; }
+.neste img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .58; transition: transform 1.6s var(--ease), opacity .6s; }
+.neste:hover img { transform: scale(1.03); opacity: .7; }
+.neste .wrap { position: relative; padding-bottom: clamp(3rem, 8vw, 5rem); }
+.neste .ordmerke-merke { color: #F7F2EA; }
+
+/* Video, bilder inn */
+.bilde-inn { opacity: 0; transform: translateY(14px); transition: opacity 1.2s var(--ease), transform 1.2s var(--ease); }
+.bilde-inn.synlig, .no-js .bilde-inn { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .bilde-inn { opacity: 1; transform: none; transition: none; } }
+/* Justeringer: omslag og asymmetrisk grid */
+.omslag { background: #BEBDC3; }
+.omslag > img { top: 19%; height: 81%; object-position: 50% 0; -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 10%); mask-image: linear-gradient(to bottom, transparent 0, #000 10%); }
+@media (min-width: 880px) { .grid-asym > .c { margin-top: 3rem; } }
+.omslag { container-type: inline-size; }
+.omslag__masthead { font-size: 24cqw; }
+.omslag::after { background: linear-gradient(180deg, rgba(33,25,19,0) 55%, rgba(33,25,19,.7) 100%); }
+.coverlinje span { font-size: clamp(1.05rem, 4.6cqw, 1.7rem); }
+
+/* ==========================================================
+   Featured Edit: detaljer. Avgrenset til .mag.
+   ========================================================== */
+
+/* Luft på sidene på mobil */
+.mag .omslag-wrap, .mag .kred { padding-left: var(--pad); padding-right: var(--pad); }
+
+/* Bildetekster: litt større og lettere å lese */
+.mag .bt { font-size: .66rem; letter-spacing: .18em; line-height: 1.6; }
+
+/* Redaksjonen (forsiden) */
+.mag .redaksjon__tittel { margin-top: 0; font-size: clamp(3.2rem, 9vw, 6.5rem); }
+.mag .register__tittel { margin: 2.75rem 0 0; font-size: .7rem; letter-spacing: .28em; line-height: 1.4; color: var(--tekst-dempet); }
+.mag .register { margin-top: .9rem; }
+.mag .register a { padding: 1.25rem .25rem; transition: background-color .4s var(--ease); }
+.mag .register a:hover { background: rgba(216,202,179,.25); }
+.mag .register .pil { transition: transform .4s var(--ease); }
+.mag .register a:hover .pil { transform: translateX(4px); }
+.mag .redaksjon__signatur { margin-top: 1.75rem; }
+.mag .redaksjon .ingress { max-width: 30ch; }
+.mag .redaksjon > p:not(.ingress):not(.kicker):not(.smaa) { max-width: 46ch; }
+@media (min-width: 980px) { .mag .redaksjon { position: sticky; top: 108px; } }
+
+/* Inngangsoppslag: tydeligere lenke, rolig bevegelse */
+.mag .aapner__lenke { margin-top: 1.5rem; }
+.mag .aapner h2.ordmerke-merke { line-height: .9; letter-spacing: .12em; }
+.mag .aapner:focus-visible .ramme { outline: 2px solid var(--burgunder); outline-offset: 4px; }
+
+/* Sitater som figurer */
+.mag .pq__figur { margin: 0; }
+.mag .pq blockquote { text-wrap: balance; }
+.mag .pq-spread blockquote { text-wrap: balance; }
+.mag .pq-spread__lang { font-size: clamp(2.2rem, 5.4vw, 4.4rem); line-height: 1.08; }
+.mag .pq-spread__kilde { margin-top: 2rem; }
+.mag .pq-spread__brod { margin-top: 2rem; }
+
+/* CTA */
+.mag .mag-cta__inner { text-align: center; }
+
+/* Overskrifter: balansert linjebryting, ingen enslige ord */
+.mag h1, .mag h2, .mag .f-tittel, .mag .aapner__tittel, .mag .coverlinje span { text-wrap: balance; }
+.mag .tekst p, .mag .qa dd, .mag .standfirst { text-wrap: pretty; hyphens: manual; }
+
+/* Feature-åpning: metalinjen skal ikke brekke midt i ord-par */
+.mag .f-meta { flex-wrap: wrap; row-gap: .4rem; }
+.mag .f-meta > * { white-space: nowrap; }
+.mag .f-meta__tilbake { text-decoration: none; background-image: linear-gradient(currentColor, currentColor); background-size: 0 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .4s var(--ease); }
+.mag .f-meta__tilbake:hover { background-size: 100% 1px; }
+@media (max-width: 420px) { .mag .f-meta { font-size: .62rem; letter-spacing: .22em; } }
+
+/* Dropcap uten inline-stil */
+.mag .tekst .dropcap { margin-top: 0; }
+
+/* Mer rytme mellom spørsmål og svar */
+.mag .qa dd { max-width: 40rem; }
+.mag .qa dt + dd { margin-top: .6rem; }
+
+/* Bildegalleri etter sitatet */
+.mag .mag-bilder { padding-bottom: clamp(4rem, 10vw, 7rem); }
+
+/* Klistrede bilder skal aldri gli under den faste toppen */
+@media (min-width: 980px) { .mag .klistre { top: calc(76px + 2rem); } }
+
+/* ---------- Takeaways: bildet/videoen i en rolig ramme ---------- */
+.mag .takeaways__media { margin: 0; padding: clamp(1.25rem, 4vw, 2.5rem) var(--pad) 0; }
+.mag .takeaways__ramme { position: relative; box-shadow: 0 30px 60px -40px rgba(0,0,0,.6); }
+.mag .takeaways__ramme video, .mag .takeaways__ramme img {
+  display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; max-height: none; object-fit: cover; object-position: 50% 0;
+}
+@media (min-width: 980px) {
+  .mag .takeaways__inner { align-items: stretch; }
+  .mag .takeaways__media { padding: clamp(2.5rem, 4vw, 3.5rem) 0 clamp(2.5rem, 4vw, 3.5rem) var(--pad); }
+  .mag .takeaways__ramme { position: sticky; top: calc(76px + 2rem); width: fit-content; max-width: 100%; }
+  .mag .takeaways__ramme video, .mag .takeaways__ramme img { width: auto; max-width: 100%; height: calc(100svh - 76px - 4rem); max-height: 880px; }
+  .mag .takeaways__tekst { padding-left: clamp(2rem, 4.5vw, 4.5rem); }
+}
+.mag .takeaways .kap-nr { color: #D9A3A9; }
+.mag .takeaways h2 { margin-top: .5rem; }
+.mag .takeaways__boks { border-color: rgba(244,239,230,.28); }
+.mag .tk span { line-height: 1.6; }
+
+/* Pause-knapp for videoen (WCAG 2.2.2) – rolig, kantete, ingen pilleform */
+.mag .video-pause {
+  position: absolute; left: .75rem; bottom: .75rem; z-index: 1;
+  font: 500 .6rem/1 var(--sans); letter-spacing: .22em; text-transform: uppercase;
+  color: var(--krem); background: rgba(43,33,27,.55); border: 1px solid rgba(244,239,230,.45); border-radius: 0;
+  padding: .6rem .8rem; cursor: pointer; transition: background-color .3s var(--ease);
+}
+.mag .video-pause:hover { background: rgba(43,33,27,.8); }
+@media (prefers-reduced-motion: reduce) { .mag .video-pause { display: none; } }
+.no-js .mag .video-pause { display: none; }
+
+/* Kreditering */
+.mag .kred__merke { font-size: clamp(2.6rem, 8vw, 4.5rem); }
+@media (max-width: 480px) { .mag .kred dl { column-gap: 1.1rem; } .mag .kred dt { letter-spacing: .18em; } }
+
+/* «Neste»-blokken: lavere på mobil, med undertittel */
+.mag .neste { min-height: 62svh; }
+@media (min-width: 880px) { .mag .neste { min-height: 78svh; } }
+.mag .neste__kicker { color: #F7F2EA; }
+.mag .neste__pil { font-size: .5em; display: inline-block; transition: transform .6s var(--ease); }
+.mag .neste:hover .neste__pil { transform: translateX(8px); }
+.mag .neste__tittel { margin: 1rem 0 0; font-family: var(--serif); font-style: italic; font-size: clamp(1.2rem, 3vw, 1.8rem); color: #F3E3D3; }
+.mag .neste::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(33,25,19,0) 40%, rgba(33,25,19,.55) 100%); pointer-events: none; }
+.mag .neste .wrap { z-index: 1; }
+.mag .neste:focus-visible { outline: 2px solid var(--sand); outline-offset: -6px; }
+
+/* Kontaktark: litt tettere og jevnere på desktop */
+@media (min-width: 880px) { .mag .kontaktark { column-gap: 1.25rem; } .mag .kontaktark figure { margin-bottom: 1.25rem; } }
+
+/* SEN: Paris-blokken tidlig i featuren */
+.mag .paris__tittel { font-family: var(--serif); font-weight: 400; font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: 1.02; color: #F3E3D3; margin: 0; text-wrap: balance; }
+.mag .paris__tittel em { color: #E3C9B5; }
+.mag .paris__uthevet { margin: 2rem 0 0; padding: 1.25rem 0 1.25rem 1.25rem; border-left: 1px solid #D9A3A9; font-family: var(--serif); font-style: italic; font-size: clamp(1.25rem, 2.6vw, 1.7rem); line-height: 1.35; color: #F3E3D3; max-width: 30ch; }
+.mag .paris .pq-spread__brod { font-size: 1.02rem; line-height: 1.7; }
+@media (min-width: 880px) { .mag .paris { min-height: 88svh; } }
+
+/* To kapitler i samme spalte */
+.mag .kap-hode--neste { margin-top: clamp(3.5rem, 8vw, 5.5rem); }
+
+/* Sluttlinje */
+.mag .pq__slutt { margin: 0 auto; max-width: 20ch; font-family: var(--serif); font-weight: 400; font-size: clamp(2rem, 6.4vw, 4.6rem); line-height: 1.08; text-wrap: balance; }
+.mag .pq__slutt em { font-style: italic; color: var(--burgunder); }
+
+/* ==========================================================
+   Editorial typografi. Avgrenset til .mag.
+   ========================================================== */
+
+/* Kapittelhode: stort kursivt romertall + tynn linje, liten sans-kicker */
+.mag .kap-hode { position: relative; gap: .35rem; }
+.mag .kap-tall { display: flex; align-items: flex-end; gap: 1.25rem; font-family: var(--serif); font-style: italic; font-weight: 400; font-variation-settings: "opsz" 96; font-size: clamp(3.6rem, 9vw, 6.5rem); line-height: .8; color: var(--burgunder); }
+.mag .kap-tall::after { content: ""; flex: 1; height: 1px; margin-bottom: .55rem; background: rgba(43,33,27,.22); }
+.mag .kap-hode .kap-nr { font-family: var(--sans); font-style: normal; font-size: .62rem; font-weight: 500; letter-spacing: .32em; text-transform: uppercase; color: var(--tekst-dempet); margin-top: .9rem; }
+.mag .kap-hode h2 { margin-top: .35rem; }
+.mag .takeaways .kap-nr, .mag .kap-hode .kap-nr:first-child { font-family: var(--serif); font-style: italic; font-size: 1.15rem; letter-spacing: 0; text-transform: none; color: var(--burgunder); margin-top: 0; }
+.mag .takeaways .kap-nr { color: #D9A3A9; }
+
+/* Ingressavsnitt i serif, som i trykk */
+.mag .tekst > p:first-child { font-family: var(--serif); font-size: clamp(1.18rem, 2.2vw, 1.32rem); line-height: 1.6; }
+.mag .tekst > p:first-child.dropcap::first-letter { font-size: 3.9em; }
+
+/* Mer hvitrom mellom kapitler på store skjermer */
+@media (min-width: 980px) { .mag .kapittel { padding: clamp(6rem, 10vw, 9.5rem) 0; } }
+
+/* Nummererte bildetekster (01, 02 …) som i trykte magasiner */
+.mag article { counter-reset: fig; }
+.mag article figcaption.bt { counter-increment: fig; }
+.mag article figcaption.bt::before { content: counter(fig, decimal-leading-zero); display: inline-block; min-width: 2.1em; margin-right: .5em; color: var(--burgunder); font-variant-numeric: tabular-nums; letter-spacing: .08em; }
+.mag .mork figcaption.bt::before, .mag .pq-spread figcaption.bt::before { color: #D9A3A9; }
+
+/* Stort utgavenummer i feature-åpningen */
+.mag .f-aapning__tekst { position: relative; }
+.mag .f-nr { position: absolute; right: var(--pad); top: clamp(4.5rem, 9vw, 6.5rem); font-family: var(--serif); font-style: italic; font-variation-settings: "opsz" 96; font-size: clamp(5.5rem, 13vw, 11rem); line-height: .8; color: rgba(185,168,142,.45); pointer-events: none; z-index: 0; }
+.mag .f-aapning__tekst > * { position: relative; z-index: 1; }
+.mag .f-aapning__tekst > .f-nr { position: absolute; z-index: 0; }
+
+/* Inngangsoppslag: store tall */
+.mag .aapner__nr { display: block; font-family: var(--serif); font-style: italic; font-variation-settings: "opsz" 96; font-size: clamp(3rem, 7vw, 5rem); line-height: .8; color: var(--burgunder); margin-bottom: 1rem; }
+
+/* Redaksjonens signatur */
+.mag .signatur { display: flex; align-items: baseline; gap: 1rem; margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid rgba(43,33,27,.2); }
+.mag .signatur__navn { font-family: var(--serif); font-style: italic; font-size: clamp(1.6rem, 3.4vw, 2.1rem); color: var(--burgunder); line-height: 1; }
+
+/* Sluttmerke */
+.mag .sluttmerke { display: inline-block; width: .32em; height: .32em; margin-left: .3em; background: var(--burgunder); vertical-align: .1em; }
+
+/* Kolofon */
+.mag .kolofon { padding: clamp(4rem, 9vw, 6.5rem) 0; border-top: 1px solid rgba(43,33,27,.12); }
+.mag .kolofon__hode { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--espresso); }
+.mag .kolofon__hode h2 { margin: 0; font-family: var(--sans); color: var(--tekst-dempet); }
+.mag .kolofon__utgave { margin: 0; font-family: var(--serif); font-size: clamp(1.4rem, 3vw, 2rem); }
+.mag .kolofon__utgave em { font-style: italic; color: var(--burgunder); }
+.mag .kolofon__liste { margin: 0; display: grid; grid-template-columns: 1fr; }
+.mag .kolofon__liste > div { padding: 1rem 0; border-bottom: 1px solid rgba(43,33,27,.14); }
+.mag .kolofon__liste dt { font-size: .6rem; font-weight: 500; letter-spacing: .28em; text-transform: uppercase; color: var(--tekst-dempet); }
+.mag .kolofon__liste dd { margin: .35rem 0 0; font-family: var(--serif); font-size: 1.05rem; line-height: 1.4; }
+@media (min-width: 720px) { .mag .kolofon__liste { grid-template-columns: repeat(2, 1fr); column-gap: 2.5rem; } }
+@media (min-width: 1100px) { .mag .kolofon__liste { grid-template-columns: repeat(4, 1fr); } }
+
+/* Sitater: tynn linje over kilden, litt mer luft */
+.mag .pq .kilde { letter-spacing: .3em; }
+@media (max-width: 979px) { .mag .f-nr { top: 6.4rem; font-size: 5rem; } }
+
+/* ==========================================================
+   Lesbarhet på mobil og desktop
+   ========================================================== */
+
+/* Sidemarg: minst 24px på telefon, mer på store skjermer, og aldri under
+   iPhone-hakket i liggende modus. */
+:root { --pad: max(clamp(1.5rem, 6.4vw, 3.5rem), calc(env(safe-area-inset-left, 0px) + 1rem), calc(env(safe-area-inset-right, 0px) + 1rem)); }
+
+/* Ingen sidelengs scroll */
+html, body { overflow-x: clip; }
+html { text-size-adjust: 100%; }
+
+/* Lange ord brytes heller enn å presse siden ut */
+.mag h1, .mag h2, .mag p, .mag dd, .mag dt, .mag figcaption, .mag blockquote, .mag li { overflow-wrap: break-word; }
+
+/* Lesbar linjelengde */
+.mag .tekst { max-width: min(37rem, 65ch); }
+.mag .qa dd { max-width: min(40rem, 65ch); }
+.mag .standfirst { max-width: min(34ch, 100%); }
+
+/* Bildetekster og tekst i fullbreddeblokker følger samme marg */
+.mag .spread .bt { padding-left: var(--pad); padding-right: var(--pad); }
+.mag .bt { margin-top: .7rem; }
+
+/* To bilder i galleriet (SEN) */
+@media (min-width: 880px) {
+  .mag .grid-asym--to > .a { grid-column: 1 / span 7; }
+  .mag .grid-asym--to > .b { grid-column: 8 / span 5; margin-top: 9rem; }
+}
+
+@media (max-width: 879px) {
+  /* Brødtekst og ingress litt roligere på telefon */
+  .mag .tekst p, .mag .qa dd { font-size: 1.03rem; line-height: 1.72; }
+  .mag .tekst > p:first-child { font-size: 1.14rem; line-height: 1.62; }
+  .mag .dropcap::first-letter, .mag .tekst > p:first-child.dropcap::first-letter { font-size: 3.4em; }
+
+  /* Overskrifter skal ikke fylle hele bredden */
+  .mag .kap-hode h2 { font-size: clamp(2rem, 9vw, 2.8rem); }
+  .mag .paris__tittel { font-size: clamp(2.1rem, 9.5vw, 3rem); }
+  .mag .pq blockquote { font-size: clamp(2rem, 9vw, 3rem); max-width: 16ch; }
+  .mag .pq__slutt { font-size: clamp(1.8rem, 8vw, 2.6rem); }
+  .mag .kap-tall { font-size: clamp(3rem, 14vw, 4rem); }
+
+  /* Paris-blokken: tekst med god luft */
+  .mag .pq-spread__tekst { padding: clamp(3rem, 12vw, 4.5rem) var(--pad); }
+  .mag .paris__uthevet { padding: 1rem 0 1rem 1rem; }
+
+  /* Kapitler: litt mindre vertikal luft, samme sidemarg */
+  .mag .kapittel { padding: clamp(3.5rem, 14vw, 5rem) 0; }
+  .mag .to-spalter { gap: 2.5rem; }
+
+  /* Galleri og kontaktark: litt mer luft mellom bildene */
+  .mag .grid-asym { gap: .9rem; }
+  .mag .kontaktark { column-gap: .9rem; }
+  .mag .kontaktark figure { margin-bottom: 1.1rem; }
+
+  /* Bildetekster: lesbare, men ikke for brede bokstavmellomrom */
+  .mag .bt { letter-spacing: .14em; }
+
+  /* Kreditering og kolofon */
+  .mag .kolofon__hode { flex-wrap: wrap; }
+}
+
+/* Kontaktark som rutenett, så bildenumrene leses i rekkefølge */
+.mag .kontaktark { columns: auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem .9rem; align-items: start; }
+.mag .kontaktark figure { margin: 0; }
+@media (max-width: 879px) { .mag .kontaktark > figure:first-child:nth-last-child(odd) { grid-column: 1 / -1; } }
+@media (min-width: 880px) {
+  .mag .kontaktark { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1.5rem 1.25rem; }
+  .mag .kontaktark > figure { grid-column: span 2; }
+  .mag .kontaktark > figure:first-child:nth-last-child(5), .mag .kontaktark > figure:first-child:nth-last-child(5) + figure { grid-column: span 3; }
+}

@@ -22,12 +22,12 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Sjekk at featured.json er gyldig
-        run: python3 -m json.tool featured.json > /dev/null
+      - name: Kontroller sider og lokale lenker
+        run: python3 scripts/check_site.py
       - name: Samle filer
         run: |
           mkdir _site
-          cp -r index.html featured.html featured.json favicon.ico CNAME assets css js _site/
+          cp -r *.html favicon.ico CNAME assets css js data _site/
           touch _site/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

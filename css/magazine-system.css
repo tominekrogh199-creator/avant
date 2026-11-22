@@ -1,0 +1,264 @@
+/* Shared magazine structure: reader navigation, editorial front and indexes. */
+.couture [hidden]{display:none!important}
+.couture-nav{gap:clamp(1.5rem,5vw,4.5rem)}
+.couture-nav a{font-size:.875rem;letter-spacing:.055em;padding:15px 0;white-space:nowrap}
+.couture-top{font-size:.75rem}
+.couture .fashion-label{font-size:.8125rem;letter-spacing:.075em}
+.couture .fashion-link{font-size:.875rem;letter-spacing:.06em;padding-bottom:5px}
+.couture-home .cover-copy{padding-top:clamp(18px,3vw,45px)}
+.couture-home .cover-copy h1{font-size:clamp(52px,6.25vw,88px);line-height:1.01;letter-spacing:-.045em;margin:0 0 25px;max-width:10ch}
+.couture-home .cover-deck{max-width:36ch;font-size:1rem;line-height:1.75}
+.entry-meta{font:400 .8125rem/1.6 var(--sans);color:#655e56;margin-top:18px}
+.cover-contents{margin-top:34px;border-top:1px solid #b8b1a6;padding-top:20px;padding-bottom:5px}
+.cover-contents>.fashion-label{margin-bottom:8px}
+.cover-contents a{display:flex;gap:15px;justify-content:space-between;align-items:baseline;padding:9px 0;text-decoration:none;border-bottom:1px solid #211d1a18}
+.cover-contents a span{font-size:.875rem;color:#655e56}
+.cover-contents strong{font:400 1.5rem/1.25 var(--serif)}
+.cover-contents a:hover strong{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+.couture .cover-credit{font-size:.75rem;margin-top:12px}
+.interview-feature{margin:80px 0 70px;scroll-margin-top:25px}
+.feature-rule{border-top:1px solid #211d1a;display:flex;justify-content:space-between;align-items:baseline;padding:17px 0 27px}
+.feature-rule .fashion-label,.feature-rule .fashion-link{margin:0}
+.interview-layout{display:grid;grid-template-columns:1.12fr 1fr;gap:clamp(35px,6vw,80px);align-items:start}
+.interview-photo{display:block;overflow:hidden}
+.couture .interview-photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.interview-copy{padding-top:20px}
+.interview-copy h2{font-size:clamp(38px,4.4vw,62px);line-height:1.06;letter-spacing:-.03em;margin-bottom:23px;max-width:13ch}
+.interview-copy>p:not(.fashion-label){font-size:1rem;line-height:1.75;max-width:41ch}
+.interview-portrait{display:grid;grid-template-columns:135px 1fr;gap:20px;align-items:end;margin:37px 0 0;border-top:1px solid #cfc7bd;padding-top:22px}
+.couture .interview-portrait img{display:block;width:135px;height:165px;object-fit:cover;object-position:50% 20%}
+.interview-portrait figcaption{font-size:.8125rem;line-height:1.6;color:#655e56;max-width:20ch;padding-bottom:4px}
+.brand-discovery{border-top:1px solid #211d1a;padding:35px 0 55px;display:grid;grid-template-columns:1fr 1.3fr;gap:70px;align-items:center}
+.brand-discovery h2{font-size:clamp(38px,4vw,56px);letter-spacing:-.025em;line-height:1.08;margin-bottom:20px}
+.brand-discovery p:not(.fashion-label){font-size:1rem;line-height:1.7;max-width:34ch}
+.brand-index-row{display:grid;grid-template-columns:1.1fr 1fr;gap:8px 20px;text-decoration:none;padding:28px 0;border-bottom:1px solid #b8b1a6}
+.brand-index-row:first-child{border-top:1px solid #b8b1a6}
+.brand-index-row span:first-child{font:400 clamp(28px,3.2vw,44px)/1.1 var(--serif);grid-row:span 2}
+.brand-index-row span:nth-child(2){font-size:.875rem;align-self:end}
+.brand-index-row span:last-child{font-size:.8125rem;color:#655e56}
+.brand-index-row:hover span:first-child{color:var(--burgunder)}
+.editor-note{padding:35px 0;margin-bottom:30px;border-top:1px solid #b8b1a6;display:grid;grid-template-columns:1fr 2fr 1fr;gap:30px;align-items:start}
+.editor-note>p:not(.fashion-label){font:400 clamp(22px,2vw,28px)/1.5 var(--serif);max-width:43ch}
+.editor-note .fashion-link{justify-self:end;margin-top:0}
+.couture .issue-credits{margin-bottom:35px}
+.collection-heading{padding:55px 0 42px;border-bottom:1px solid #211d1a}
+.collection-heading h1{font-size:clamp(54px,7vw,96px);line-height:1.05;letter-spacing:-.04em;margin-bottom:20px}
+.collection-heading>p:last-child{font-size:1.0625rem;line-height:1.75;max-width:48ch}
+.browse-controls{display:flex;align-items:end;justify-content:space-between;gap:30px;padding:28px 0 18px}
+.search-field{width:min(400px,100%)}
+.search-field label{display:block;font-size:.875rem;margin-bottom:10px}
+.search-field input{display:block;width:100%;font:400 1rem/1.5 var(--sans);background:transparent;color:#211d1a;border:0;border-radius:0;border-bottom:1px solid #6f685e;min-height:48px;padding:10px 32px 10px 0}
+.search-field input::placeholder{color:#736c63}
+.couture input:focus-visible,.couture button:focus-visible{outline:2px solid var(--burgunder);outline-offset:4px}
+.filter-list{display:flex;flex-wrap:wrap;gap:4px 20px}
+.filter-list button,.empty-result button{cursor:pointer;background:transparent;border:0;border-radius:0;padding:12px 0;font:400 .875rem/1.5 var(--sans);color:inherit;min-height:44px}
+.filter-list button[aria-pressed="true"]{box-shadow:inset 0 -2px var(--burgunder);color:var(--burgunder)}
+.result-count{font-size:.8125rem;color:#655e56;padding:10px 0 25px}
+.archive-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:60px 45px;padding-bottom:75px}
+.archive-card{min-width:0}
+.archive-image{display:block;overflow:hidden;background:#e9e4dc}
+.couture .archive-image img{display:block;width:100%;height:auto;aspect-ratio:4/4.5;object-fit:cover;object-position:50% 35%}
+.archive-card .fashion-label{margin:23px 0 12px}
+.archive-card h2{font-size:clamp(30px,3.6vw,48px);line-height:1.12;letter-spacing:-.025em;max-width:20ch}
+.headline-link{text-decoration:none}
+.headline-link:hover{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
+.archive-card>p:not(.fashion-label){font-size:1rem;line-height:1.75;margin-top:17px;max-width:50ch}
+.empty-result{border-top:1px solid #cfc7bd;padding:40px 0 75px;min-height:300px}
+.empty-result h2{font-size:40px;margin-bottom:16px}
+.empty-result p{font-size:1rem}
+.empty-result button{margin-top:18px;text-decoration:underline;text-underline-offset:5px}
+.brand-directory{margin-bottom:70px}
+.brand-entry{display:grid;grid-template-columns:230px 1fr;gap:clamp(32px,6vw,80px);border-top:1px solid #b8b1a6;padding:35px 0;scroll-margin-top:25px}
+.brand-photo{align-self:start}
+.couture .brand-photo img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.brand-entry h2{font-size:clamp(42px,5vw,68px);letter-spacing:-.025em;line-height:1.05}
+.brand-designer{font-size:.9375rem;color:#655e56;margin:12px 0 22px}
+.brand-entry p:not(.fashion-label):not(.brand-designer){font-size:1rem;line-height:1.7;max-width:44ch}
+.brand-stories{margin-top:25px}
+.brand-stories h3{font:500 .8125rem/1.5 var(--sans);text-transform:uppercase;letter-spacing:.05em}
+.brand-stories .fashion-link{margin:10px 22px 0 0;text-transform:none;letter-spacing:0;font-size:1rem}
+.external-link{display:inline-block;font-size:.875rem;text-underline-offset:5px;margin-top:25px;padding:5px 0}
+.external-link span{font-size:.75rem;color:#655e56}
+.about-columns{display:grid;grid-template-columns:1fr 1.4fr;gap:70px;padding:50px 0 65px;border-bottom:1px solid #b8b1a6}
+.about-columns h2,.contact-editorial h2{font-size:clamp(34px,4vw,52px);line-height:1.12;letter-spacing:-.025em}
+.about-columns p{font-size:1.0625rem;line-height:1.8;margin:0 0 20px;max-width:53ch}
+.contact-editorial{display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:60px 0 80px}
+.contact-editorial h2{margin-bottom:20px}
+.contact-editorial p{font-size:1rem;line-height:1.75;max-width:43ch}
+.contact-mail{display:inline-block;margin-top:25px;overflow-wrap:anywhere;font-size:1rem;text-underline-offset:5px}
+.contact-editorial .entry-meta{font-size:.8125rem}
+.contact-editorial .skjema{margin:0}
+.contact-editorial .skjema__note{font-size:.8125rem}
+.contact-editorial .pil{display:none}
+.more-stories{margin:50px 0}
+.more-stories>h2{font-size:44px;margin-bottom:30px}
+@media(min-width:1600px){.couture-home .cover-copy h1{font-size:96px}}
+@media(min-width:700px) and (max-width:1000px){
+ .couture-home .cover-copy h1{font-size:clamp(46px,6.25vw,64px)}
+ .couture-home .cover-copy{padding-top:5px}
+ .cover-contents{margin-top:20px;padding-top:12px}
+ .interview-layout{gap:32px}
+ .interview-copy{padding-top:0}
+ .interview-copy h2{font-size:42px}
+ .interview-portrait{grid-template-columns:95px 1fr;gap:15px;margin-top:25px;padding-top:18px}
+ .couture .interview-portrait img{width:95px;height:120px}
+ .brand-discovery,.about-columns,.contact-editorial{gap:35px}
+ .brand-entry{grid-template-columns:200px 1fr;gap:35px}
+}
+@media(max-width:699px){
+ .couture-nav{justify-content:space-between;gap:8px}
+ .couture-nav a{font-size:.875rem;text-transform:none;letter-spacing:0;padding:14px 0}
+ .couture-top{font-size:.75rem;height:34px;letter-spacing:.025em}
+ .couture .couture-issue{font-size:.75rem}
+ .couture .cover-mark{font-size:.75rem}
+ .couture-home .cover-copy{padding-top:25px}
+ .couture-home .cover-copy h1{font-size:clamp(48px,12.5vw,72px);max-width:11ch;line-height:1.02;margin-bottom:20px}
+ .couture-home .cover-deck{max-width:none;line-height:1.75}
+ .cover-contents{margin-top:27px;padding-top:18px}
+ .cover-contents a{padding:10px 0}
+ .interview-feature{margin:48px 0 40px}
+ .interview-layout{grid-template-columns:1fr;gap:26px}
+ .interview-copy{padding-top:0}
+ .interview-copy h2{font-size:44px;max-width:13ch;margin-bottom:19px}
+ .interview-copy>p:not(.fashion-label){max-width:none}
+ .interview-portrait{margin-top:27px;grid-template-columns:105px 1fr}
+ .couture .interview-portrait img{width:105px;height:130px}
+ .interview-portrait figcaption{max-width:22ch}
+ .brand-discovery{grid-template-columns:1fr;gap:30px;padding:28px 0 36px}
+ .brand-discovery h2{font-size:43px}
+ .brand-index-row{padding:23px 0;gap:8px 14px}
+ .brand-index-row span:first-child{font-size:34px}
+ .editor-note{grid-template-columns:1fr;gap:15px;padding:28px 0;margin-bottom:15px}
+ .editor-note .fashion-label{margin:0}
+ .editor-note>p:not(.fashion-label){font-size:26px;line-height:1.45}
+ .editor-note .fashion-link{justify-self:start;margin-top:6px}
+ .collection-heading{padding:33px 0 28px}
+ .collection-heading h1{font-size:58px;margin-bottom:17px}
+ .collection-heading>p:last-child{font-size:1rem;line-height:1.75}
+ .browse-controls{display:block;padding-top:23px}
+ .search-field{width:100%}
+ .filter-list{margin-top:14px;gap:4px 25px}
+ .result-count{padding:3px 0 23px}
+ .archive-grid{grid-template-columns:1fr;gap:40px;padding-bottom:50px}
+ .archive-card h2{font-size:38px}
+ .archive-card .fashion-label{margin-top:20px}
+ .brand-directory{margin-bottom:35px}
+ .brand-entry{grid-template-columns:100px minmax(0,1fr);gap:20px;padding:26px 0}
+ .brand-entry h2{font-size:38px}
+ .brand-entry .fashion-label{margin-bottom:10px;font-size:.75rem}
+ .brand-designer{margin:10px 0 18px}
+ .brand-entry p:not(.fashion-label):not(.brand-designer){line-height:1.7}
+ .brand-stories{margin-top:22px}
+ .brand-stories .fashion-link{margin-right:0}
+ .external-link{line-height:1.7;margin-top:18px}
+ .about-columns,.contact-editorial{grid-template-columns:1fr;gap:25px;padding:32px 0}
+ .about-columns h2,.contact-editorial h2{font-size:38px}
+ .about-columns p{font-size:1rem}
+ .contact-editorial{padding-bottom:45px}
+}
+@media(max-width:359px){
+ .couture-header,.couture-main{width:calc(100% - 28px)}
+ .couture-nav{gap:6px}
+ .couture-nav a{font-size:.8125rem}
+ .couture-home .cover-copy h1{font-size:47px}
+ .interview-copy h2{font-size:39px}
+ .brand-entry{grid-template-columns:80px minmax(0,1fr);gap:16px}
+ .brand-entry h2{font-size:32px}
+ .brand-entry .brand-designer{font-size:.875rem}
+ .brand-index-row span:first-child{font-size:30px}
+ .brand-index-row span:nth-child(2){font-size:.8125rem}
+}
+
+/* Review 6: mobile reading, targets, image alignment and article navigation. */
+.couture .cover-photo{align-self:start}
+.couture .fashion-link{display:inline-flex;align-items:center;min-height:44px;padding:8px 0;text-wrap:balance}
+.couture .fashion-link:hover,.article-return a:hover{color:var(--burgunder)}
+.couture .external-link,.couture .contact-mail{min-height:44px;padding-block:10px}
+.couture .cover-deck,.interview-copy>p,.archive-card>p,.brand-description,.collection-heading>p{text-wrap:pretty}
+.couture .collection-heading h1{max-width:12ch;text-wrap:balance}
+.couture .about-columns h2,.couture .contact-editorial h2{max-width:14ch;text-wrap:balance}
+.couture :where(h1,h2,h3,p,dd,dt,figcaption,a){overflow-wrap:break-word}
+.couture main:focus{outline:none}
+.couture [id]{scroll-margin-top:24px}
+.couture .brand-heading .brand-designer{margin-bottom:22px}
+.browse-controls{flex-wrap:wrap;position:relative;gap:16px 28px}
+.clear-filters{border:0;background:none;padding:10px 0;min-height:44px;color:var(--burgunder);font:400 .875rem/1.5 var(--sans);text-decoration:underline;text-underline-offset:5px;cursor:pointer}
+.search-field input:focus-visible{outline-offset:4px}
+.couture .filter-list button{padding:12px 6px;min-width:44px}
+.couture .filter-list{gap:4px 14px}
+.couture .bunn nav ul{gap:0 24px}
+.couture .bunn nav a{display:inline-flex;align-items:center;min-height:44px}
+.couture .bunn__kontakt>a,.couture .bunn__sosial a{display:inline-block;min-height:44px;padding:9px 0}
+.couture .bunn__sosial{margin-top:0}
+.couture .issue-credits summary{min-height:48px;font-size:.875rem}
+.couture .issue-credits .kolofon__liste{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 30px}
+.couture .issue-credits .kolofon__liste>div{border-top:1px solid #cfc7bd;padding-top:13px}
+.couture .issue-credits .kolofon__liste dt{font-size:.8125rem;color:#655e56}
+.couture .issue-credits .kolofon__liste dd{font-size:.9375rem;line-height:1.65;margin:5px 0 0}
+.publication-article .article-contents{padding:10px 0;gap:4px 24px;align-items:center;font-size:.875rem}
+.publication-article .article-contents a{display:inline-flex;align-items:center;min-height:44px}
+.publication-article .f-meta>a{display:inline-flex;align-items:center;min-height:44px}
+.publication-article .f-meta{align-items:center;padding-bottom:0}
+.publication-article .article-return{display:flex;justify-content:space-between;gap:20px;padding:12px 0 24px;border-top:1px solid #cfc7bd}
+.article-return a{display:inline-flex;align-items:center;min-height:44px;font-size:.875rem;text-underline-offset:5px}
+.publication-article .mag .kred .knapper{align-items:center;gap:15px 25px;flex-wrap:wrap}
+.publication-article .mag .kred .fashion-link{margin-top:0}
+.publication-article .mag .kred .knapp{max-width:100%}
+.publication-article .next-story{min-width:0}
+.publication-article .next-story .wrap{min-width:0}
+.publication-article .next-story .kicker{font-size:.75rem;letter-spacing:.07em;line-height:1.65}
+.publication-article .mag .product-spread{gap:28px;align-items:center;padding:25px 0}
+.publication-article .mag .product-spread img{flex:none;height:auto;object-fit:contain}
+.publication-article .mag .product-spread figcaption{font-size:.8125rem;line-height:1.7;max-width:30ch}
+.publication-article .mag .pq-spread__kilde{color:#e9ded1}
+.contact-editorial .form-instruction{margin:0;font-size:.875rem;color:#655e56}
+.contact-editorial .felt input,.contact-editorial .felt textarea{font-size:1rem;min-height:48px}
+.contact-editorial textarea{min-height:150px;resize:vertical}
+.contact-editorial .field-error{display:block;color:var(--burgunder);font-size:.875rem;line-height:1.5;margin-top:7px}
+.contact-editorial [aria-invalid="true"]{border-color:var(--burgunder);box-shadow:inset 0 -1px var(--burgunder)}
+.contact-editorial .skjema__status{min-height:0}
+@media(min-width:700px){
+ .publication-article .klistre{max-width:336px}
+ .publication-article .mag .tekst{max-width:58ch}
+ .publication-article .mag .trio{max-width:400px;justify-self:end}
+}
+@media(max-width:699px){
+ .couture .couture-top{gap:12px}
+ .couture .collection-heading h1{font-size:clamp(43px,12vw,64px);max-width:12ch}
+ .couture .feature-rule{gap:20px;padding-block:12px 20px;align-items:center}
+ .couture .feature-rule .fashion-label{max-width:60%}
+ .couture .feature-rule .fashion-link{flex-shrink:0}
+ .couture .brand-entry{grid-template-columns:110px minmax(0,1fr);gap:18px 23px;align-items:center}
+ .couture .brand-info{display:contents}
+ .couture .brand-heading{grid-column:2;grid-row:1}
+ .couture .brand-heading .brand-designer{margin-bottom:0}
+ .couture .brand-description,.couture .brand-stories,.couture .brand-entry .external-link{grid-column:1/-1}
+ .couture .brand-stories,.couture .brand-entry .external-link,.couture .brand-description{margin-top:0}
+ .couture .brand-photo{grid-column:1;grid-row:1}
+ .couture .brand-description{max-width:48ch}
+ .couture .brand-stories .fashion-link{margin-top:3px}
+ .couture .brand-entry .external-link{justify-self:start}
+ .couture .issue-credits .kolofon__liste{grid-template-columns:1fr;gap:14px}
+ .couture .issue-credits .kolofon__hode{display:none}
+ .couture .bunn__kontakt{display:block}
+ .couture .bunn__rad{gap:12px}
+ .couture .bunn__kontakt>a{overflow-wrap:anywhere;font-size:.9375rem}
+ .publication-article .article-contents{justify-content:flex-start;gap:0 20px;padding-block:10px}
+ .publication-article .article-contents>span{flex-basis:100%;font-size:.8125rem}
+ .publication-article .mag .f-meta{gap:4px 14px;justify-content:center;flex-wrap:wrap;font-size:.75rem;letter-spacing:.04em}
+ .publication-article .mag .product-spread{display:block;padding:22px 0}
+ .publication-article .mag .product-spread img{max-width:100%;max-height:460px;width:auto;margin-inline:auto}
+ .publication-article .mag .product-spread figcaption{max-width:100%;margin-top:13px}
+ .publication-article .article-return{padding-bottom:18px}
+ .couture .brand-index-row span:nth-child(2){line-height:1.6}
+ .couture .cover-contents a{min-height:48px}
+}
+@media(max-width:359px){
+ .couture .brand-entry{grid-template-columns:90px minmax(0,1fr);gap:17px}
+ .couture .brand-entry h2{font-size:34px}
+ .couture .couture-top{font-size:.6875rem;letter-spacing:0}
+ .couture .collection-heading h1{font-size:44px}
+}
+@media(prefers-reduced-motion:reduce){.couture *{scroll-behavior:auto!important}}
+/* The old full-bleed next-story used white text; this version sits on cream. */
+.publication-article .mag .next-story .kicker{color:#652631}

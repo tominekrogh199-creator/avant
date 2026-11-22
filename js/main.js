@@ -46,21 +46,42 @@
     a.target = "_blank"; a.rel = "noopener";
   });
 
-  // Kontaktskjema -> mailto
+  // Contact: validate each field, then open a draft in the user's mail app.
   var skjema = document.getElementById("kontaktskjema");
   if (skjema) {
+    skjema.noValidate = true;
     var status = document.getElementById("skjema-status");
+    var requiredFields = [skjema.elements.navn, skjema.elements.epost, skjema.elements.melding];
+    function validateField(field) {
+      var value = field.value.trim();
+      var message = "";
+      if (!value) message = {navn:"Skriv navnet ditt.", epost:"Skriv e-postadressen din.", melding:"Skriv en melding."}[field.name];
+      else if (field.name === "epost" && (field.validity.typeMismatch || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))) message = "Skriv en gyldig e-postadresse, for eksempel navn@eksempel.no.";
+      var error = document.getElementById(field.id + "-error");
+      if (message) field.setAttribute("aria-invalid", "true"); else field.removeAttribute("aria-invalid");
+      error.textContent = message; error.hidden = !message;
+      return !message;
+    }
+    requiredFields.forEach(function (field) {
+      field.addEventListener("input", function () {
+        if (field.hasAttribute("aria-invalid")) validateField(field);
+        status.textContent = "";
+      });
+    });
     skjema.addEventListener("submit", function (e) {
       e.preventDefault();
+      var invalid = requiredFields.filter(function (field) { return !validateField(field); });
+      if (invalid.length) {
+        status.textContent = invalid.length === 1 ? "Rett det markerte feltet." : "Fyll ut de markerte feltene.";
+        invalid[0].focus(); return;
+      }
       var f = skjema.elements;
-      var navn = f.navn.value.trim(), epost = f.epost.value.trim(), merke = f.merke.value.trim(), melding = f.melding.value.trim();
-      if (!navn || !epost || !melding) { status.textContent = "Fyll inn navn, e-post og melding."; (!navn ? f.navn : !epost ? f.epost : f.melding).focus(); return; }
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(epost)) { status.textContent = "Sjekk at e-postadressen er riktig."; f.epost.focus(); return; }
-      var emne = "Henvendelse til AVANT" + (merke ? " – " + merke : "") + " – " + navn;
-      var tekst = "Hei AVANT!\n\n" + melding + "\n\n—\nNavn: " + navn + "\nE-post: " + epost + (merke ? "\nMerke / Instagram: " + merke : "") + "\n";
-      var til = cfg.epost || "Tominekrogh199@gmail.com";
-      status.textContent = "Åpner e-postprogrammet ditt … Skjer ingenting? Send til " + til + ".";
-      window.location.href = "mailto:" + til + "?subject=" + encodeURIComponent(emne) + "&body=" + encodeURIComponent(tekst);
+      var navn=f.navn.value.trim(), epost=f.epost.value.trim(), merke=f.merke.value.trim(), melding=f.melding.value.trim();
+      var emne="Henvendelse til AVANT"+(merke ? " – "+merke : "")+" – "+navn;
+      var tekst="Hei AVANT!\n\n"+melding+"\n\n—\nNavn: "+navn+"\nE-post: "+epost+(merke ? "\nMerke / Instagram: "+merke : "")+"\n";
+      var til=cfg.epost || "Tominekrogh199@gmail.com";
+      status.textContent="Åpner et utkast i e-postprogrammet ditt. Du sender det selv derfra. Skjer ingenting? Send direkte til "+til+".";
+      window.location.href="mailto:"+til+"?subject="+encodeURIComponent(emne)+"&body="+encodeURIComponent(tekst);
     });
   }
 })();
